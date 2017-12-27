@@ -1,6 +1,6 @@
 sources:
   - Tests/
 templates:
-  - bin/LinuxMain.stencil
+  - templates/LinuxMain.stencil
 output:
   '.'
