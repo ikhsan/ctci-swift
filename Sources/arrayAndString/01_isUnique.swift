@@ -10,7 +10,9 @@ private func asciiIndex(_ char: Character) -> Int {
     return Int(s[s.startIndex].value)
 }
 
-// Solution #1: Use dictionary
+/// Solution #1: Use dictionary
+///
+/// Complexity: O(n) time, O(n) space where n is number of unique char
 public func isUnique1(_ string: String) -> Bool {
     var chars: [Character : Int] = [:]
 
@@ -22,7 +24,11 @@ public func isUnique1(_ string: String) -> Bool {
     return true
 }
 
-// Solution #2: Use bits
+/// Solution #2: Use bits
+///
+/// Complexity: O(n) time, O(1) space
+/// Int can either be Int32 or Int64 based on its platform, to make a safe assumption,
+/// we only support lowercase letter in ascii which only needs 26 bit
 public func isUnique2(_ string: String) -> Bool {
     let words = clean(string)
     var letter = 0
