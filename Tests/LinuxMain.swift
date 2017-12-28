@@ -13,9 +13,15 @@ extension ArrayStringTests {
     ("test_05_OneAway", test_05_OneAway),
   ]
 }
+extension LinkedListsTests {
+  static var allTests: [(String, (LinkedListsTests) -> () throws -> Void)] = [
+    ("test_01_RemoveDups", test_01_RemoveDups)
+  ]
+}
 
 // swiftlint:disable trailing_comma
 XCTMain([
   testCase(ArrayStringTests.allTests),
+  testCase(LinkedListsTests.allTests),
 ])
 // swiftlint:enable trailing_comma

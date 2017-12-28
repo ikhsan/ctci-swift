@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DataStructure",
+        "repositoryURL": "https://github.com/ikhsan/DataStructure",
+        "state": {
+          "branch": "master",
+          "revision": "d6ea6e36f0cea4d0c4efcd5108db9ef984ee0e97",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
