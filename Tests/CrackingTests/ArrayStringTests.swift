@@ -50,8 +50,14 @@ class ArrayStringTests: XCTestCase {
      */
     func test_04_PalindromPermutation() {
         XCTAssert(isPalindromePermutation("Tact Coa"))
+        XCTAssert(isPalindromePermutation2("abba"))
         XCTAssert(isPalindromePermutation("Kasur Nababan rusak"))
         XCTAssertFalse(isPalindromePermutation("hello world"))
+
+        XCTAssert(isPalindromePermutation2("Tact Coa"))
+        XCTAssert(isPalindromePermutation2("ABBA"))
+        XCTAssert(isPalindromePermutation2("Kasur Nababan rusak"))
+        XCTAssertFalse(isPalindromePermutation2("hello world"))
     }
 
     /**
