@@ -8,14 +8,10 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
-        .target(
-            name: "ArrayAndString",
-            path: "Sources/ArrayAndString"
-        ),
+        .target(name: "ArrayString"),
         .testTarget(
-            name: "ArrayAndStringTests",
-            dependencies: ["ArrayAndString"],
-            path: "Tests/ArrayAndStringTests"
+            name: "ArrayStringTests",
+            dependencies: ["ArrayString"]
         ),
     ]
 )

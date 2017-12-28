@@ -1,5 +1,5 @@
 import XCTest
-import ArrayAndString
+import ArrayString
 
 /**
  Problem: URLify

@@ -1,6 +1,6 @@
 // sourcery:file:Tests/LinuxMain.swift
 import XCTest
-@testable import ArrayAndStringTests
+@testable import ArrayStringTests
 
 {% for type in types.classes|based:"XCTestCase" %}
 {% if not type.annotations.disableTests %}extension {{ type.name }} {
