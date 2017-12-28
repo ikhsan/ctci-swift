@@ -74,5 +74,90 @@ class ArrayStringTests: XCTestCase {
         XCTAssertFalse(isOneAway("hell", "ohello"))
     }
 
+    /**
+     6: String Compression
+
+     Implement a method to perform basic string compression using the counts of repeated characters. For example, the string `aabccccaaa` would become `a2b1c5a3`. If the 'compressed' string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters (a -z)
+     */
+    func _test_06_StringCompression() {
+        XCTAssertEqual(compress("aabccccaaa"), "a2b1c5a3")
+        XCTAssertEqual(compress("aa"), "a2")
+        XCTAssertEqual(compress("abcde"), "abcde")
+    }
+
+    func assertMatrixEqual<T: Equatable>(_ lhs: [[T]], _ rhs: [[T]]) {
+        for (index, leftRow) in lhs.enumerated() {
+            let rightRow = rhs[index]
+            if (leftRow != rightRow) {
+                XCTFail()
+            }
+        }
+    }
+
+    /**
+     7: Rotate Matrix
+
+     Given an image represented by an NxN matric, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
+     */
+    func _test_07_RotateMatrix() {
+        let matrix1 = [ [1] ]
+        let expected1 = [ [1] ]
+
+        assertMatrixEqual(rotate(matrix: matrix1), expected1)
+
+        let matrix2 = [
+            [1, 2],
+            [3, 4],
+        ]
+        let expected2 = [
+            [3, 1],
+            [4, 2],
+        ]
+        assertMatrixEqual(rotate(matrix: matrix2), expected2)
+
+        let matrix3 = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+        ]
+        let expected3 = [
+            [7, 4, 1],
+            [8, 5, 2],
+            [9, 6, 3],
+        ]
+        assertMatrixEqual(rotate(matrix: matrix3), expected3)
+    }
+
+    /**
+     8: Zero Matrix
+
+     Write an algorithm such that if an element in a n MxN matrix is 0, its entire row and column are set to 0.
+     */
+    func _test_08_ZeroMatrix() {
+        let matrix = [
+            [1, 2, 3, 4],
+            [5, 6, 0, 8],
+            [9, 10, 11, 12],
+        ]
+        let expected = [
+            [1, 2, 0, 4],
+            [0, 0, 0, 0],
+            [9, 10, 0, 12],
+        ]
+        assertMatrixEqual(zero(matrix: matrix), expected)
+    }
+
+    /**
+     9: String Rotation
+
+     Assume you have a method `isSubstring` which checks if one word is a substring of another. Given two strings, `s1` and `s2`, write code to tcheck if `s2` is a rotation of s1 using only one call to `isSubstring`.
+     */
+    func _test_09_StringRotation() {
+        XCTAssert(isRotation("test", "test"))
+        XCTAssert(isRotation("waterbottle", "erbottlewat"))
+        XCTAssert(isRotation("helloworld", "worldhello"))
+        XCTAssert(isRotation("hello", "heyo"))
+
+    }
 }
 
