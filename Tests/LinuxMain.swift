@@ -8,7 +8,8 @@ extension ArrayStringTests {
   static var allTests: [(String, (ArrayStringTests) -> () throws -> Void)] = [
     ("test_01_AllUnique", test_01_AllUnique),
     ("test_02_CheckPermutation", test_02_CheckPermutation),
-    ("test_03_Urlify", test_03_Urlify)
+    ("test_03_Urlify", test_03_Urlify),
+    ("test_04_PalindromPermutation", test_04_PalindromPermutation),
   ]
 }
 
