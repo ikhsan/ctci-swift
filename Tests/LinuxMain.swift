@@ -2,8 +2,15 @@
 // DO NOT EDIT
 
 import XCTest
-@testable import ArrayStringTests
+@testable import CrackingTests
 
+extension ArrayStringTests {
+  static var allTests: [(String, (ArrayStringTests) -> () throws -> Void)] = [
+    ("test_01_AllUnique", test_01_AllUnique),
+    ("test_02_CheckPermutation", test_02_CheckPermutation),
+    ("test_03_Urlify", test_03_Urlify)
+  ]
+}
 extension CheckPermutationTests {
   static var allTests: [(String, (CheckPermutationTests) -> () throws -> Void)] = [
     ("testIsPermutation", testIsPermutation),
@@ -25,6 +32,7 @@ extension UrlifyTests {
 
 // swiftlint:disable trailing_comma
 XCTMain([
+  testCase(ArrayStringTests.allTests),
   testCase(CheckPermutationTests.allTests),
   testCase(IsUniqueTests.allTests),
   testCase(UrlifyTests.allTests),

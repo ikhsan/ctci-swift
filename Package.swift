@@ -9,9 +9,10 @@ let package = Package(
     ],
     targets: [
         .target(name: "ArrayString"),
+        
         .testTarget(
-            name: "ArrayStringTests",
+            name: "CrackingTests",
             dependencies: ["ArrayString"]
-        ),
+        )
     ]
 )
