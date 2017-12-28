@@ -65,12 +65,13 @@ class ArrayStringTests: XCTestCase {
 
      There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.
      */
-    func _test_05_OneAway() {
+    func test_05_OneAway() {
         XCTAssert(isOneAway("test", "test"))
         XCTAssert(isOneAway("pale", "ple"))
-        XCTAssert(isOneAway("pales", "ple"))
-        XCTAssert(isOneAway("pales", "bale"))
+        XCTAssert(isOneAway("pales", "pale"))
+        XCTAssert(isOneAway("bake", "cake"))
         XCTAssertFalse(isOneAway("pales", "bake"))
+        XCTAssertFalse(isOneAway("hell", "ohello"))
     }
 
 }
