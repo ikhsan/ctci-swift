@@ -150,14 +150,24 @@ class ArrayStringTests: XCTestCase {
     /**
      9: String Rotation
 
-     Assume you have a method `isSubstring` which checks if one word is a substring of another. Given two strings, `s1` and `s2`, write code to tcheck if `s2` is a rotation of s1 using only one call to `isSubstring`.
+     Assume you have a method `isSubstring` which checks if one word is a substring of another. Given two strings, `s1` and `s2`, write code to check if `s2` is a rotation of s1 using only one call to `isSubstring`.
      */
-    func _test_09_StringRotation() {
+    func test_09_StringRotation() {
+        isSubstringCallCount = 0
         XCTAssert(isRotation("test", "test"))
-        XCTAssert(isRotation("waterbottle", "erbottlewat"))
-        XCTAssert(isRotation("helloworld", "worldhello"))
-        XCTAssert(isRotation("hello", "heyo"))
+        XCTAssertEqual(isSubstringCallCount, 1)
 
+        isSubstringCallCount = 0
+        XCTAssert(isRotation("waterbottle", "erbottlewat"))
+        XCTAssertEqual(isSubstringCallCount, 1)
+
+        isSubstringCallCount = 0
+        XCTAssert(isRotation("helloworld", "worldhello"))
+        XCTAssertEqual(isSubstringCallCount, 1)
+
+        isSubstringCallCount = 0
+        XCTAssertFalse(isRotation("hello", "heyo"))
+        XCTAssertEqual(isSubstringCallCount, 1)
     }
 }
 
