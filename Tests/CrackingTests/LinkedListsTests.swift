@@ -40,7 +40,12 @@ class LinkedListsTests: XCTestCase {
 
      Implement an algorithm to find the kth to last element of a singly linked list.
      */
-    func _test_02_ReturnKthToLast() {}
+    func test_02_ReturnKthToLast() {
+        XCTAssertNil(kthToLast(-2, [1, 2, 3]))
+        XCTAssertNil(kthToLast(10, [1, 2, 3, 4, 5, 6, 7, 8]))
+        XCTAssertEqual(kthToLast(1, [1, 2, 3, 4, 5, 6, 7, 8]), 8)
+        XCTAssertEqual(kthToLast(4, [1, 2, 3, 4, 5, 6, 7, 8]), 5)
+    }
 
     /**
      3: Delete Middle Node
