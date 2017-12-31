@@ -1,6 +1,17 @@
 import ArrayAndStringQuestions
 import XCTest
 
+extension XCTestCase {
+    fileprivate func assertMatrixEqual<T: Equatable>(_ lhs: [[T]], _ rhs: [[T]]) {
+        for (index, leftRow) in lhs.enumerated() {
+            let rightRow = rhs[index]
+            if (leftRow != rightRow) {
+                XCTFail()
+            }
+        }
+    }
+}
+
 class ArrayAndStringTests: XCTestCase {
 
     /**
@@ -117,15 +128,6 @@ class ArrayAndStringTests: XCTestCase {
             [9, 6, 3],
         ]
         assertMatrixEqual(rotate(matrix: matrix3), expected3)
-    }
-
-    private func assertMatrixEqual<T: Equatable>(_ lhs: [[T]], _ rhs: [[T]]) {
-        for (index, leftRow) in lhs.enumerated() {
-            let rightRow = rhs[index]
-            if (leftRow != rightRow) {
-                XCTFail()
-            }
-        }
     }
 
     /**
