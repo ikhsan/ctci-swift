@@ -85,15 +85,6 @@ class ArrayStringTests: XCTestCase {
         XCTAssertEqual(compress("abcde"), "abcde")
     }
 
-    func assertMatrixEqual<T: Equatable>(_ lhs: [[T]], _ rhs: [[T]]) {
-        for (index, leftRow) in lhs.enumerated() {
-            let rightRow = rhs[index]
-            if (leftRow != rightRow) {
-                XCTFail()
-            }
-        }
-    }
-
     /**
      7: Rotate Matrix
 
@@ -126,6 +117,15 @@ class ArrayStringTests: XCTestCase {
             [9, 6, 3],
         ]
         assertMatrixEqual(rotate(matrix: matrix3), expected3)
+    }
+
+    private func assertMatrixEqual<T: Equatable>(_ lhs: [[T]], _ rhs: [[T]]) {
+        for (index, leftRow) in lhs.enumerated() {
+            let rightRow = rhs[index]
+            if (leftRow != rightRow) {
+                XCTFail()
+            }
+        }
     }
 
     /**
