@@ -11,6 +11,7 @@ extension ArrayStringTests {
     ("test_03_Urlify", test_03_Urlify),
     ("test_04_PalindromPermutation", test_04_PalindromPermutation),
     ("test_05_OneAway", test_05_OneAway),
+    ("test_06_StringCompression", test_06_StringCompression),
   ]
 }
 extension LinkedListsTests {
