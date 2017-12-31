@@ -1,5 +1,5 @@
-import XCTest
 import ArrayAndStringQuestions
+import XCTest
 
 class ArrayAndStringTests: XCTestCase {
 

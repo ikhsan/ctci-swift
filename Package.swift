@@ -11,7 +11,7 @@ let package = Package(
     targets: [
         .target(name: "ArrayAndStringQuestions"),
         .target(
-            name: "LinkedLists",
+            name: "LinkedListsQuestions",
             dependencies: [ "DataStructure" ]
         ),
         
@@ -19,7 +19,7 @@ let package = Package(
             name: "CrackingTests",
             dependencies: [
                 "ArrayAndStringQuestions",
-                "LinkedLists"
+                "LinkedListsQuestions"
             ]
         )
     ]

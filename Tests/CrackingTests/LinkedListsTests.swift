@@ -1,6 +1,7 @@
-import XCTest
 import DataStructure
-import LinkedLists
+import LinkedListsQuestions
+
+import XCTest
 
 class LinkedListsTests: XCTestCase {
 
