@@ -9,7 +9,7 @@ let package = Package(
         .package(url: "https://github.com/ikhsan/DataStructure", .branch("master"))
     ],
     targets: [
-        .target(name: "ArrayString"),
+        .target(name: "ArrayAndStringQuestions"),
         .target(
             name: "LinkedLists",
             dependencies: [ "DataStructure" ]
@@ -18,7 +18,7 @@ let package = Package(
         .testTarget(
             name: "CrackingTests",
             dependencies: [
-                "ArrayString",
+                "ArrayAndStringQuestions",
                 "LinkedLists"
             ]
         )

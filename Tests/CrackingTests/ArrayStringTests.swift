@@ -1,7 +1,7 @@
 import XCTest
-import ArrayString
+import ArrayAndStringQuestions
 
-class ArrayStringTests: XCTestCase {
+class ArrayAndStringTests: XCTestCase {
 
     /**
      1: Is Unique

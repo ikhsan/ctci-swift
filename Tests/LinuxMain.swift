@@ -4,8 +4,8 @@
 import XCTest
 @testable import CrackingTests
 
-extension ArrayStringTests {
-  static var allTests: [(String, (ArrayStringTests) -> () throws -> Void)] = [
+extension ArrayAndStringTests {
+  static var allTests: [(String, (ArrayAndStringTests) -> () throws -> Void)] = [
     ("test_01_AllUnique", test_01_AllUnique),
     ("test_02_CheckPermutation", test_02_CheckPermutation),
     ("test_03_Urlify", test_03_Urlify),
@@ -24,7 +24,7 @@ extension LinkedListsTests {
 
 // swiftlint:disable trailing_comma
 XCTMain([
-  testCase(ArrayStringTests.allTests),
+  testCase(ArrayAndStringTests.allTests),
   testCase(LinkedListsTests.allTests),
 ])
 // swiftlint:enable trailing_comma
