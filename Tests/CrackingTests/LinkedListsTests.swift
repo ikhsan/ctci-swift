@@ -89,7 +89,16 @@ class LinkedListsTests: XCTestCase {
 
      Implement a function to check if a linked list is a palindrome.
      */
-    func _test_06_Palindrome() {}
+    func test_06_Palindrome() {
+        XCTAssert(isPalindrome(LinkedList<Int>()))
+        XCTAssert(isPalindrome([1]))
+
+        XCTAssert(isPalindrome([1, 1]))
+        XCTAssert(isPalindrome(["K","A","S","U","R","E","B","E","R","U","S","A","K"]))
+
+        XCTAssertFalse(isPalindrome([1,2,3]))
+        XCTAssertFalse(isPalindrome(["H", "E", "L", "L", "O"]))
+    }
 
     /**
      7: Intersection

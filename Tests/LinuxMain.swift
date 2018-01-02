@@ -19,6 +19,7 @@ extension LinkedListsTests {
   static var allTests: [(String, (LinkedListsTests) -> () throws -> Void)] = [
     ("test_01_RemoveDups", test_01_RemoveDups),
     ("test_02_ReturnKthToLast", test_02_ReturnKthToLast),
+    ("test_06_Palindrome", test_06_Palindrome),
   ]
 }
 
