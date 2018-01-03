@@ -14,12 +14,17 @@ let package = Package(
             name: "LinkedListsQuestions",
             dependencies: [ "DataStructure" ]
         ),
+        .target(
+            name: "StacksAndQueuesQuestions",
+            dependencies: [ "DataStructure" ]
+        ),
         
         .testTarget(
             name: "CrackingTests",
             dependencies: [
                 "ArrayAndStringQuestions",
-                "LinkedListsQuestions"
+                "LinkedListsQuestions",
+                "StacksAndQueuesQuestions",
             ]
         )
     ]

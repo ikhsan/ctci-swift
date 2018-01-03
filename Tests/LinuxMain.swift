@@ -22,10 +22,16 @@ extension LinkedListsTests {
     ("test_06_Palindrome", test_06_Palindrome),
   ]
 }
+extension StacksAndQueuesTests {
+  static var allTests: [(String, (StacksAndQueuesTests) -> () throws -> Void)] = [
+    ("test_04_QueueViaStacks", test_04_QueueViaStacks)
+  ]
+}
 
 // swiftlint:disable trailing_comma
 XCTMain([
   testCase(ArrayAndStringTests.allTests),
   testCase(LinkedListsTests.allTests),
+  testCase(StacksAndQueuesTests.allTests),
 ])
 // swiftlint:enable trailing_comma
