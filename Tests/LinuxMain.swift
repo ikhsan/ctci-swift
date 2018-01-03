@@ -19,12 +19,13 @@ extension LinkedListsTests {
   static var allTests: [(String, (LinkedListsTests) -> () throws -> Void)] = [
     ("test_01_RemoveDups", test_01_RemoveDups),
     ("test_02_ReturnKthToLast", test_02_ReturnKthToLast),
+    ("test_05_SumLists", test_05_SumLists),
     ("test_06_Palindrome", test_06_Palindrome),
   ]
 }
 extension StacksAndQueuesTests {
   static var allTests: [(String, (StacksAndQueuesTests) -> () throws -> Void)] = [
-    ("test_04_QueueViaStacks", test_04_QueueViaStacks)
+    ("test_04_QueueViaStacks", test_04_QueueViaStacks),
   ]
 }
 
