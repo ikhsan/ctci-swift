@@ -95,7 +95,25 @@ class StacksAndQueuesTests: XCTestCase {
 
      Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array). The stack supports the following operations: `push`, `pop`, `peek`, and `isEmpty`.
      */
-    func _test_05_SortStack() {}
+    func test_05_SortStack() {
+        let stack = Stack<Int>()
+        stack.push(8)
+        stack.push(5)
+        stack.push(3)
+        stack.push(10)
+        stack.push(1)
+        stack.push(5)
+
+        let subject = sortStack(stack)
+
+        XCTAssertEqual(subject.pop(), 1)
+        XCTAssertEqual(subject.pop(), 3)
+        XCTAssertEqual(subject.pop(), 5)
+        XCTAssertEqual(subject.pop(), 5)
+        XCTAssertEqual(subject.pop(), 8)
+        XCTAssertEqual(subject.pop(), 10)
+        XCTAssertNil(subject.peek())
+    }
 
     /**
      6: Animal Shelter
