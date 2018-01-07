@@ -17,7 +17,42 @@ class StacksAndQueuesTests: XCTestCase {
 
      How would you design a stack which, in addition to `push` and `pop`, has a function `min` which returns the minimum element? `Push`, `pop` and `min` should all operate in O(1) time
      */
-    func _test_02_StackMin() {}
+    func test_02_StackMin() {
+        let subject = MinStack<Int>()
+        XCTAssertNil(subject.min())
+
+        subject.push(3)
+        XCTAssertEqual(subject.min(), 3)
+
+        subject.push(5)
+        XCTAssertEqual(subject.min(), 3)
+
+        subject.push(10)
+        XCTAssertEqual(subject.min(), 3)
+
+        subject.push(1)
+        XCTAssertEqual(subject.min(), 1)
+
+        subject.push(9)
+        subject.push(1)
+        XCTAssertEqual(subject.min(), 1)
+
+        XCTAssertEqual(subject.pop(), 1)
+        XCTAssertEqual(subject.min(), 1)
+
+        XCTAssertEqual(subject.pop(), 9)
+        XCTAssertEqual(subject.min(), 1)
+
+        XCTAssertEqual(subject.pop(), 1)
+        XCTAssertEqual(subject.min(), 3)
+
+        XCTAssertEqual(subject.pop(), 10)
+        XCTAssertEqual(subject.pop(), 5)
+        XCTAssertEqual(subject.pop(), 3)
+
+        XCTAssertNil(subject.pop())
+        XCTAssertNil(subject.min())
+    }
 
     /**
      3: Stack of Plates: Imagine a (literal) stack of plates. If the stack gets too high, it might topple. Therefore, in real life, we would likely start a new stack when the previous stack exceeds some threshold. Implement a data structure `SetOfStacks` that mimics this. `SetOfStacks` should be composed of several stacks and should create a new stack once the previous one exceeds capacity. `SetOfStacks.push()` and `SetOfStacks.pop()` should behave identically to a single stack (that is, `pop()` should return the same values as it would if there were just a single stack).
@@ -69,4 +104,3 @@ class StacksAndQueuesTests: XCTestCase {
      */
     func _test_06_AnimalShelter() {}
 }
-

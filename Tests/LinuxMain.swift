@@ -26,6 +26,7 @@ extension LinkedListsTests {
 }
 extension StacksAndQueuesTests {
   static var allTests: [(String, (StacksAndQueuesTests) -> () throws -> Void)] = [
+    ("test_02_StackMin", test_02_StackMin),
     ("test_04_QueueViaStacks", test_04_QueueViaStacks),
   ]
 }
