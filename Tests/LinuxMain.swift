@@ -12,6 +12,7 @@ extension ArrayAndStringTests {
     ("test_04_PalindromPermutation", test_04_PalindromPermutation),
     ("test_05_OneAway", test_05_OneAway),
     ("test_06_StringCompression", test_06_StringCompression),
+    ("test_07_RotateMatrix", test_07_RotateMatrix),
     ("test_09_StringRotation", test_09_StringRotation)
   ]
 }

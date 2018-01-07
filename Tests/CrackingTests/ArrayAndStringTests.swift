@@ -101,7 +101,7 @@ class ArrayAndStringTests: XCTestCase {
 
      Given an image represented by an NxN matric, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
      */
-    func _test_07_RotateMatrix() {
+    func test_07_RotateMatrix() {
         let matrix1 = [ [1] ]
         let expected1 = [ [1] ]
 
@@ -128,6 +128,20 @@ class ArrayAndStringTests: XCTestCase {
             [9, 6, 3],
         ]
         assertMatrixEqual(rotate(matrix: matrix3), expected3)
+
+        let matrix4 = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12],
+            [13, 14, 15, 16],
+        ]
+        let expected4 = [
+            [13, 9, 5, 1],
+            [14, 10, 6, 2],
+            [15, 11, 7, 3],
+            [16, 12, 8, 4],
+        ]
+        assertMatrixEqual(rotate(matrix: matrix4), expected4)
     }
 
     /**
@@ -172,4 +186,3 @@ class ArrayAndStringTests: XCTestCase {
         XCTAssertEqual(isSubstringCallCount, 1)
     }
 }
-
