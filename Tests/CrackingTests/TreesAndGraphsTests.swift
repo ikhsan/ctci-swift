@@ -2,7 +2,43 @@ import TreesAndGraphsQuestions
 
 import XCTest
 
+extension XCTestCase {
+
+    fileprivate func assertOrderSorted<T>(_ order: [T], in graph: Graph<T>, file: StaticString = #file, line: UInt = #line) {
+        guard !graph.vertices.isEmpty && !order.isEmpty else { return XCTFail("graph/order is empty", file: file, line: line) }
+
+        for (index, vertex) in order.enumerated() {
+            for p in graph.getEdges(vertex) {
+                let depIndex = order.index(where: { $0.description == p.description })!
+                if depIndex <= index { XCTFail("dependents precedes parent node", file: file, line: line) }
+            }
+        }
+    }
+
+}
+
 class TreesAndGraphsTests: XCTestCase {
+
+    /**
+     1: Route Between Nodes
+
+     Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
+     */
+    func test_01_RouteBetweenNodes() {
+        let nodes = ["a","b","c","d","e","f"]
+        let dependencies = [("a","d"), ("f","b"), ("b","d"), ("f","a"), ("d","c") ]
+        let graph = Graph<MarkedVertex>(strings: nodes, dependencies: dependencies)
+
+        let f = graph.getVertex("f")!
+        let e = graph.getVertex("e")!
+        let c = graph.getVertex("c")!
+
+        graph.reset()
+        XCTAssertFalse(isDfsRouted(from: f, to: e, in: graph))
+
+        graph.reset()
+        XCTAssert(isDfsRouted(from: f, to: c, in: graph))
+    }
 
     /**
      7: Build Order
@@ -17,25 +53,13 @@ class TreesAndGraphsTests: XCTestCase {
     func test_07_BuildOrder() {
         let projects = ["a","b","c","d","e","f"]
         let dependencies = [("a","d"), ("f","b"), ("b","d"), ("f","a"), ("d","c") ]
+        let graph = Graph<Project>(strings: projects, dependencies: dependencies)
 
-        let order1 = buildOrder(projects, dependencies)
-        print(order1)
-        assertBuildOrder(order1)
+        graph.reset()
+        assertOrderSorted(order(graph), in: graph)
 
-        let order2 = buildOrder2(projects, dependencies)
-        print(order2)
-        assertBuildOrder(order2)
-    }
-
-    private func assertBuildOrder(_ projects: [Project], file: StaticString = #file, line: UInt = #line) {
-        guard !projects.isEmpty else { return XCTFail("build order is empty", file: file, line: line) }
-
-        for (index, project) in projects.enumerated() {
-            for p in project.dependents {
-                let depIndex = projects.index(where: { $0.name == p.name })!
-                if depIndex <= index { XCTFail("dependents precedes parent node", file: file, line: line) }
-            }
-        }
+        graph.reset()
+        assertOrderSorted(order2(graph), in: graph)
     }
 
 }
