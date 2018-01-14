@@ -31,11 +31,17 @@ extension StacksAndQueuesTests {
     ("test_05_SortStack", test_05_SortStack),
   ]
 }
+extension TreesAndGraphsTests {
+  static var allTests: [(String, (TreesAndGraphsTests) -> () throws -> Void)] = [
+    ("test_07_BuildOrder", test_07_BuildOrder),
+  ]
+}
 
 // swiftlint:disable trailing_comma
 XCTMain([
   testCase(ArrayAndStringTests.allTests),
   testCase(LinkedListsTests.allTests),
   testCase(StacksAndQueuesTests.allTests),
+  testCase(TreesAndGraphsTests.allTests),
 ])
 // swiftlint:enable trailing_comma
