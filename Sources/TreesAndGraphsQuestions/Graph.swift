@@ -58,4 +58,3 @@ public class Graph<T: Vertex> {
         addEdge(from: s, to: t)
     }
 }
-

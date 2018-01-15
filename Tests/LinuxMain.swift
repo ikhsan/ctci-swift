@@ -33,7 +33,8 @@ extension StacksAndQueuesTests {
 }
 extension TreesAndGraphsTests {
   static var allTests: [(String, (TreesAndGraphsTests) -> () throws -> Void)] = [
-    ("test_07_BuildOrder", test_07_BuildOrder),
+    ("test_01_RouteBetweenNodes", test_01_RouteBetweenNodes),
+    ("test_07_BuildOrder", test_07_BuildOrder)
   ]
 }
 

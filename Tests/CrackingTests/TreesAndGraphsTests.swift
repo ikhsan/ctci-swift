@@ -38,6 +38,12 @@ class TreesAndGraphsTests: XCTestCase {
 
         graph.reset()
         XCTAssert(isDfsRouted(from: f, to: c, in: graph))
+
+        graph.reset()
+        XCTAssertFalse(isBfsRouted(from: f, to: e, in: graph))
+
+        graph.reset()
+        XCTAssert(isBfsRouted(from: f, to: c, in: graph))
     }
 
     /**
