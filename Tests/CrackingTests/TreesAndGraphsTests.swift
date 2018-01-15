@@ -1,4 +1,5 @@
 import TreesAndGraphsQuestions
+import DataStructure
 
 import XCTest
 
@@ -27,7 +28,7 @@ class TreesAndGraphsTests: XCTestCase {
     func test_01_RouteBetweenNodes() {
         let nodes = ["a","b","c","d","e","f"]
         let dependencies = [("a","d"), ("f","b"), ("b","d"), ("f","a"), ("d","c") ]
-        let graph = Graph<MarkedVertex>(strings: nodes, dependencies: dependencies)
+        let graph = Graph<MarkedVertex>(vertices: nodes, edges: dependencies)
 
         let f = graph.getVertex("f")!
         let e = graph.getVertex("e")!
@@ -59,7 +60,7 @@ class TreesAndGraphsTests: XCTestCase {
     func test_07_BuildOrder() {
         let projects = ["a","b","c","d","e","f"]
         let dependencies = [("a","d"), ("f","b"), ("b","d"), ("f","a"), ("d","c") ]
-        let graph = Graph<Project>(strings: projects, dependencies: dependencies)
+        let graph = Graph<Project>(vertices: projects, edges: dependencies)
 
         graph.reset()
         assertOrderSorted(order(graph), in: graph)

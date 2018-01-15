@@ -1,4 +1,4 @@
-import Foundation
+import DataStructure
 
 // MARK: - Solution #1
 
