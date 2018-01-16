@@ -1,17 +1,6 @@
 import ArrayAndStringQuestions
 import XCTest
 
-extension XCTestCase {
-    fileprivate func assertMatrixEqual<T: Equatable>(_ lhs: [[T]], _ rhs: [[T]]) {
-        for (index, leftRow) in lhs.enumerated() {
-            let rightRow = rhs[index]
-            if (leftRow != rightRow) {
-                XCTFail()
-            }
-        }
-    }
-}
-
 class ArrayAndStringTests: XCTestCase {
 
     /**

@@ -1,6 +1,5 @@
 import DataStructure
 import LinkedListsQuestions
-
 import XCTest
 
 class LinkedListsTests: XCTestCase {
