@@ -6,11 +6,11 @@ import XCTest
 class LinkedListsTests: XCTestCase {
 
     /**
-     1:  Remove Dups
+     2.1:  Remove Dups
 
      Write code to remove duplicates from an unsorted linked list. **Follow Up**: How would you solve this problem if a temporary buffer is not allowed?
      */
-    func test_01_RemoveDups() {
+    func test_2_1_RemoveDups() {
         let list1: LinkedList<Int> = [1, 2, 3, 4, 5, 3, 5]
         removeDups(list1)
         XCTAssertEqual(list1, [1, 2, 3, 4, 5])
@@ -37,11 +37,11 @@ class LinkedListsTests: XCTestCase {
     }
 
     /**
-     2: Return Kth to Last
+     2.2: Return Kth to Last
 
      Implement an algorithm to find the kth to last element of a singly linked list.
      */
-    func test_02_ReturnKthToLast() {
+    func test_2_2_ReturnKthToLast() {
         XCTAssertNil(kthToLast(-2, [1, 2, 3]))
         XCTAssertNil(kthToLast(10, [1, 2, 3, 4, 5, 6, 7, 8]))
         XCTAssertEqual(kthToLast(1, [1, 2, 3, 4, 5, 6, 7, 8]), 8)
@@ -49,28 +49,28 @@ class LinkedListsTests: XCTestCase {
     }
 
     /**
-     3: Delete Middle Node
+     2.3: Delete Middle Node
 
      Implement an algorithm to delete a node in the middle (i.r.m any node but the first and last node, not necessarily the exact middle) of a singly linked list, given only access to that node.
 
      Input: the ode c from the linked list a->b->c->d->e->f
      Result: nothing is returned, bit the new lnked list looks like a->b->d->e->f
      */
-    func _test_03_DeleteMiddleNode() {}
+    func _test_2_3_DeleteMiddleNode() {}
 
 
     /**
-     4: Partition
+     2.4: Partition
 
      Write code to partition a linked list around a value x, such that all nodes less than x come before all nodes greater than or equal to x. If x is contained within the list, the values of x only need to be after the elements less than x (see below). The partition element x can appear anywhere in the "right partition"; it does not to appear between the left and right partitions.
 
      Input: 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
      Output: 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
      */
-    func _test_04_Partition() {}
+    func _test_2_4_Partition() {}
 
     /**
-     5: Sum Lists
+     2.5: Sum Lists
 
      You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
 
@@ -82,7 +82,7 @@ class LinkedListsTests: XCTestCase {
      Input: (6 -> 1 -> 7) + (2 -> 9 -> 5). That is, 617 + 295
      Output: 9 -> 1 -> 2. That is, 912.
      */
-    func test_05_SumLists() {
+    func test_2_5_SumLists() {
         XCTAssertEqual(sumList([7, 1, 6], [5, 9 ,2]), [2, 1, 9])
         XCTAssertEqual(sumList([9, 9, 9], [1]), [0, 0, 0, 1])
 
@@ -91,11 +91,11 @@ class LinkedListsTests: XCTestCase {
     }
 
     /**
-     6: Palindrome
+     2.6: Palindrome
 
      Implement a function to check if a linked list is a palindrome.
      */
-    func test_06_Palindrome() {
+    func test_2_6_Palindrome() {
         XCTAssert(isPalindrome(LinkedList<Int>()))
         XCTAssert(isPalindrome([1]))
 
@@ -107,14 +107,14 @@ class LinkedListsTests: XCTestCase {
     }
 
     /**
-     7: Intersection
+     2.7: Intersection
 
      Given two (singly) linked lists, determine if the two lists intersect. Return the intersecting node. Note that the intersection is definced based on reference, not value. That is, if the `kth` node of the first linked list is the exact same node (by reference) as the `jth` node of the second linked list, then they are intersecting.
      */
-    func _test_07_Intersection() {}
+    func _test_2_7_Intersection() {}
 
     /**
-     8: Loop Detection
+     2.8: Loop Detection
 
      Given a circular linked list, implement an algoroightm that returns the node at the beginning of the loop.
 
@@ -123,6 +123,6 @@ class LinkedListsTests: XCTestCase {
      Input: A -> B -> C -> D -> E
      Output: C
      */
-    func _test_08_LoopDetection() {}
+    func _test_2_8_LoopDetection() {}
 
 }

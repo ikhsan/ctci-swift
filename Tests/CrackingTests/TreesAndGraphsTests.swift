@@ -21,11 +21,11 @@ extension XCTestCase {
 class TreesAndGraphsTests: XCTestCase {
 
     /**
-     1: Route Between Nodes
+     4.1: Route Between Nodes
 
      Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
      */
-    func test_01_RouteBetweenNodes() {
+    func test_4_1_RouteBetweenNodes() {
         let nodes = ["a","b","c","d","e","f"]
         let dependencies = [("a","d"), ("f","b"), ("b","d"), ("f","a"), ("d","c") ]
         let graph = Graph<MarkedVertex>(vertices: nodes, edges: dependencies)
@@ -49,20 +49,20 @@ class TreesAndGraphsTests: XCTestCase {
 
 
     /**
-     2: Minimal Tree
+     4.2: Minimal Tree
 
      Given a sorted (increasing order) array with unique integer elements, write an algorithm to create a binary search tree with minimal height.
     */
-    
+
 
     /**
-     3: List of Depth
+     4.3: List of Depth
 
      Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth (e.g. if you have a tree with depth D, you'll have D linked lists).
     */
 
     /**
-     7: Build Order
+     4.7: Build Order
 
      You are given a list of projects and a list of dependencies (which is a list of pairs of projects, where the second project is dependent on the first project). All of a project's dependencies must be built before the project is. Find a build order that will allow the projects to be built. If there is no valid build order, return an error.
 
@@ -71,7 +71,7 @@ class TreesAndGraphsTests: XCTestCase {
       `dependencies: (a,d), (f,b), (b,d), (f,a), (d,c)`
     Output: `f, e, a, b, d, c`
      */
-    func test_07_BuildOrder() {
+    func test_4_7_BuildOrder() {
         let projects = ["a","b","c","d","e","f"]
         let dependencies = [("a","d"), ("f","b"), ("b","d"), ("f","a"), ("d","c") ]
         let graph = Graph<Project>(vertices: projects, edges: dependencies)
