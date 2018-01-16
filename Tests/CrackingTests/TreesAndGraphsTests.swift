@@ -47,6 +47,20 @@ class TreesAndGraphsTests: XCTestCase {
         XCTAssert(isBfsRouted(from: f, to: c, in: graph))
     }
 
+
+    /**
+     2: Minimal Tree
+
+     Given a sorted (increasing order) array with unique integer elements, write an algorithm to create a binary search tree with minimal height.
+    */
+    
+
+    /**
+     3: List of Depth
+
+     Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth (e.g. if you have a tree with depth D, you'll have D linked lists).
+    */
+
     /**
      7: Build Order
 
