@@ -60,6 +60,29 @@ class TreesAndGraphsTests: XCTestCase {
     */
 
     /**
+     4.5: Validate BST
+
+     Implement a function to check if a binary tree is a binary search tree
+    */
+    func test_4_5_ValidateBST() {
+        XCTAssertFalse(validateBST(tree: BinaryTree<Int>.empty))
+        XCTAssert(validateBST(tree: BinaryTree.node(.empty, 1, .empty)))
+
+        let subject1 = minimalTree([1, 3, 5, 6, 9, 13, 16, 20])
+        XCTAssert(validateBST(tree: subject1))
+
+        let one = BinaryTree.node(.empty, 1, .empty)
+        let minus = BinaryTree.node(one, -2, .empty)
+        let six = BinaryTree.node(.empty, 6, .empty)
+        let thirteen = BinaryTree.node(.empty, 13, .empty)
+        let twenty = BinaryTree.node(.empty, 20, .empty)
+        let five = BinaryTree.node(minus, 5, six)
+        let sixteen = BinaryTree.node(thirteen, 16, twenty)
+        let subject2 = BinaryTree.node(five, 9, sixteen)
+        XCTAssertFalse(validateBST(tree: subject2))
+    }
+
+    /**
      4.7: Build Order
 
      You are given a list of projects and a list of dependencies (which is a list of pairs of projects, where the second project is dependent on the first project). All of a project's dependencies must be built before the project is. Find a build order that will allow the projects to be built. If there is no valid build order, return an error.
