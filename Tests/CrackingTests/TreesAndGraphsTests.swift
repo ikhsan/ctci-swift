@@ -37,6 +37,20 @@ class TreesAndGraphsTests: XCTestCase {
 
      Given a sorted (increasing order) array with unique integer elements, write an algorithm to create a binary search tree with minimal height.
     */
+    func test_4_2_MinimalTree() {
+        let list = [1, 3, 5, 6, 9, 13, 16, 20]
+
+        let one = BinaryTree.node(.empty, 1, .empty)
+        let three = BinaryTree.node(one, 3, .empty)
+        let six = BinaryTree.node(.empty, 6, .empty)
+        let thirteen = BinaryTree.node(.empty, 13, .empty)
+        let twenty = BinaryTree.node(.empty, 20, .empty)
+        let five = BinaryTree.node(three, 5, six)
+        let sixteen = BinaryTree.node(thirteen, 16, twenty)
+        let expectedTree = BinaryTree.node(five, 9, sixteen)
+
+        XCTAssertEqual(minimalTree(list), expectedTree)
+    }
 
 
     /**
