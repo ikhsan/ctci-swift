@@ -31,7 +31,6 @@ class TreesAndGraphsTests: XCTestCase {
         XCTAssert(isBfsRouted(from: f, to: c, in: graph))
     }
 
-
     /**
      4.2: Minimal Tree
 
@@ -58,6 +57,17 @@ class TreesAndGraphsTests: XCTestCase {
 
      Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth (e.g. if you have a tree with depth D, you'll have D linked lists).
     */
+    func test_4_3_ListOfDepth() {
+        let tree = minimalTree([1, 3, 5, 6, 9, 13, 16, 20])
+
+        let subject = listOfDepth(tree)
+        XCTAssertEqual(subject, [
+            [9],
+            [5, 16],
+            [3, 6, 13, 20],
+            [1],
+        ])
+    }
 
     /**
      4.5: Validate BST
