@@ -36,7 +36,8 @@ extension TreesAndGraphsTests {
     ("test_4_1_RouteBetweenNodes", test_4_1_RouteBetweenNodes),
     ("test_4_2_MinimalTree", test_4_2_MinimalTree),
     ("test_4_5_ValidateBST", test_4_5_ValidateBST),
-    ("test_4_7_BuildOrder", test_4_7_BuildOrder)
+    ("test_4_7_BuildOrder", test_4_7_BuildOrder),
+    ("test_4_8_FirstCommonAncestor", test_4_8_FirstCommonAncestor)
   ]
 }
 

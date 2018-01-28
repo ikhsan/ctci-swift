@@ -104,4 +104,29 @@ class TreesAndGraphsTests: XCTestCase {
         assertOrderSorted(order2(graph), in: graph)
     }
 
+    /**
+     4.8: First Common Ancestor
+
+     Design an algorithm and write code to find the first common ancestor of two nodes in a binary tree. Avoid storing additional nodes in a data structure. NOTE: This is not necessarily a binary search tree.
+    */
+    func test_4_8_FirstCommonAncestor() {
+        let three = BinaryTree.node(.empty, 3, .empty)
+        let seven = BinaryTree.node(.empty, 7, .empty)
+        let five =  BinaryTree.node(three, 5, seven)
+
+        let seventeen = BinaryTree.node(.empty, 17, .empty)
+        let fifteen = BinaryTree.node(.empty, 15, seventeen)
+        let ten = BinaryTree.node(five, 10, fifteen)
+
+        let thirty = BinaryTree.node(.empty, 30, .empty)
+        let tree = BinaryTree.node(ten, 20, thirty)
+
+        XCTAssertEqual(commonAncestor(root: tree, p: seventeen, q: seven), ten)
+        XCTAssertEqual(commonAncestor(root: tree, p: ten, q: seventeen), ten)
+        XCTAssertEqual(commonAncestor(root: tree, p: ten, q: ten), ten)
+
+        let hundred = BinaryTree.node(.empty, 100, .empty)
+        XCTAssertNil(commonAncestor(root: tree, p: seven, q: hundred))
+    }
+
 }
