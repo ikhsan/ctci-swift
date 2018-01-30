@@ -2,6 +2,21 @@ import DataStructure
 import LinkedListsQuestions
 import XCTest
 
+extension LinkedList {
+    fileprivate func append(node: LinkedList.Node?) {
+        guard head != nil else {
+            head = node
+            return
+        }
+
+        var current = head
+        while (current?.next != nil) {
+            current = current?.next
+        }
+        current?.next = node
+    }
+}
+
 class LinkedListsTests: XCTestCase {
 
     /**
@@ -110,7 +125,17 @@ class LinkedListsTests: XCTestCase {
 
      Given two (singly) linked lists, determine if the two lists intersect. Return the intersecting node. Note that the intersection is definced based on reference, not value. That is, if the `kth` node of the first linked list is the exact same node (by reference) as the `jth` node of the second linked list, then they are intersecting.
      */
-    func _test_2_7_Intersection() {}
+    func test_2_7_Intersection() {
+        let list1: LinkedList<Int> = [1, 4, 5, 3]
+        let list2: LinkedList<Int> = [7, 2, 8, 6]
+        XCTAssertNil(listIntersection(list1, list2))
+
+        let shared: LinkedList<Int> = [9, 10, 11]
+        let nine = shared.head
+        list1.append(node: nine)
+        list2.append(node: nine)
+        XCTAssert(listIntersection(list1, list2) === nine)
+    }
 
     /**
      2.8: Loop Detection
