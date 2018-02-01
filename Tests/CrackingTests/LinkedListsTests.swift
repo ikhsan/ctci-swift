@@ -147,6 +147,17 @@ class LinkedListsTests: XCTestCase {
      Input: A -> B -> C -> D -> E
      Output: C
      */
-    func _test_2_8_LoopDetection() {}
+    func test_2_8_LoopDetection() {
+        let emptyList: LinkedList<Int> = []
+        XCTAssertFalse(detectLoop(emptyList))
+
+        let list: LinkedList<Int> = [1, 4, 5, 3]
+        XCTAssertFalse(detectLoop(list))
+
+        let cyclic: LinkedList<Int> = [7, 2, 8, 6]
+        let seven = cyclic.head!
+        cyclic.append(node: seven)
+        XCTAssert(detectLoop(cyclic))
+    }
 
 }

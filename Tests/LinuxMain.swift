@@ -23,6 +23,7 @@ extension LinkedListsTests {
     ("test_2_5_SumLists", test_2_5_SumLists),
     ("test_2_6_Palindrome", test_2_6_Palindrome),
     ("test_2_7_Intersection", test_2_7_Intersection),
+    ("test_2_8_LoopDetection", test_2_8_LoopDetection)
   ]
 }
 extension StacksAndQueuesTests {
