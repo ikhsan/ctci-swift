@@ -6,15 +6,6 @@
 
 Solutions of Cracking The Coding Interview written in Swift.
 
-## Solved Problems
-
-{% for type in types.classes|based:"XCTestCase" %}
-{% if not type.annotations.disableTests %}- {{ type.name|replace:"Tests","" }}
-  {% for method in type.methods %}{% if method.parameters.count == 0 and method.shortName|hasPrefix:"test" %}
-  - {{ method.shortName|replace:"test_",""|replace:"_","." }}
-  {% endif %}{% endfor %}
-{% endif %}{% endfor %}
-
 ## Tests
 
 Tests are updated by using [Sourcery](https://github.com/krzysztofzablocki/Sourcery). When editing tests (add, remove, disable, enable tests) run `sourcery` from the root folder. You can unzip `sourcery`'s [latest binary](https://github.com/krzysztofzablocki/Sourcery/releases) and put the `bin` directory in the root directory, then run `bin/sourcery` from the root directory.
@@ -30,6 +21,15 @@ You can also run individual tests by using its number.
 ```bash
 $ swift test --filter 2.1
 ```
+
+## Solved Problems
+
+{% for type in types.classes|based:"XCTestCase" %}
+{% if not type.annotations.disableTests %}- {{ type.name|replace:"Tests","" }}
+  {% for method in type.methods %}{% if method.parameters.count == 0 and method.shortName|hasPrefix:"test" %}
+  - {{ method.shortName|replace:"test_",""|replace:"_","." }}
+  {% endif %}{% endfor %}
+{% endif %}{% endfor %}
 
 ## License
 
