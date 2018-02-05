@@ -16,6 +16,11 @@ extension ArrayAndStringTests {
     ("test_1_9_StringRotation", test_1_9_StringRotation)
   ]
 }
+extension BitManipulationTests {
+  static var allTests: [(String, (BitManipulationTests) -> () throws -> Void)] = [
+    ("test_5_1_Insertion", test_5_1_Insertion)
+  ]
+}
 extension LinkedListsTests {
   static var allTests: [(String, (LinkedListsTests) -> () throws -> Void)] = [
     ("test_2_1_RemoveDups", test_2_1_RemoveDups),
@@ -47,6 +52,7 @@ extension TreesAndGraphsTests {
 // swiftlint:disable trailing_comma
 XCTMain([
   testCase(ArrayAndStringTests.allTests),
+  testCase(BitManipulationTests.allTests),
   testCase(LinkedListsTests.allTests),
   testCase(StacksAndQueuesTests.allTests),
   testCase(TreesAndGraphsTests.allTests),

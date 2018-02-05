@@ -16,6 +16,8 @@ Solutions of Cracking The Coding Interview written in Swift.
   - 1.6.StringCompression
   - 1.7.RotateMatrix
   - 1.9.StringRotation
+- BitManipulation
+  - 5.1.Insertion
 - LinkedLists
   - 2.1.RemoveDups
   - 2.2.ReturnKthToLast
@@ -45,10 +47,10 @@ Run the test by using SPM's test command:
 $ swift test
 ```
 
-You can also run individual tests by its number.
+You can also run individual tests by using its number.
 
 ```bash
-$ swift test --filter 2_1
+$ swift test --filter 2.1
 ```
 
 ## License

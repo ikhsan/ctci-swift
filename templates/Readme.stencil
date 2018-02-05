@@ -25,10 +25,10 @@ Run the test by using SPM's test command:
 $ swift test
 ```
 
-You can also run individual tests by its number.
+You can also run individual tests by using its number.
 
 ```bash
-$ swift test --filter 2_1
+$ swift test --filter 2.1
 ```
 
 ## License
