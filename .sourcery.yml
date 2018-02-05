@@ -2,5 +2,6 @@ sources:
   - Tests/
 templates:
   - templates/LinuxMain.stencil
+  - templates/Readme.stencil
 output:
   '.'

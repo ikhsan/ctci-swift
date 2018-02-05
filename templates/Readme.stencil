@@ -1,3 +1,4 @@
+// sourcery:file:README.md
 # Cracking The Coding Interview
 
 [![Build Status](https://travis-ci.org/ikhsan/ctci-swift.svg?branch=master)](https://travis-ci.org/ikhsan/ctci-swift)
@@ -7,33 +8,12 @@ Solutions of Cracking The Coding Interview written in Swift.
 
 ## Solved Problems
 
-- ArrayAndString
-  - 1.1.AllUnique
-  - 1.2.CheckPermutation
-  - 1.3.Urlify
-  - 1.4.PalindromPermutation
-  - 1.5.OneAway
-  - 1.6.StringCompression
-  - 1.7.RotateMatrix
-  - 1.9.StringRotation
-- LinkedLists
-  - 2.1.RemoveDups
-  - 2.2.ReturnKthToLast
-  - 2.5.SumLists
-  - 2.6.Palindrome
-  - 2.7.Intersection
-  - 2.8.LoopDetection
-- StacksAndQueues
-  - 3.2.StackMin
-  - 3.4.QueueViaStacks
-  - 3.5.SortStack
-- TreesAndGraphs
-  - 4.1.RouteBetweenNodes
-  - 4.2.MinimalTree
-  - 4.3.ListOfDepth
-  - 4.5.ValidateBST
-  - 4.7.BuildOrder
-  - 4.8.FirstCommonAncestor
+{% for type in types.classes|based:"XCTestCase" %}
+{% if not type.annotations.disableTests %}- {{ type.name|replace:"Tests","" }}
+  {% for method in type.methods %}{% if method.parameters.count == 0 and method.shortName|hasPrefix:"test" %}
+  - {{ method.shortName|replace:"test_",""|replace:"_","." }}
+  {% endif %}{% endfor %}
+{% endif %}{% endfor %}
 
 ## Tests
 
@@ -54,3 +34,5 @@ $ swift test --filter 2_1
 ## License
 
 MIT
+
+// sourcery:end
