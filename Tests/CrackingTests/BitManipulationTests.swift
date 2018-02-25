@@ -19,4 +19,20 @@ class BitManipulationTests: XCTestCase {
         XCTAssertEqual(subject, 0b10001001100)
     }
 
+    /**
+     5.6: Conversion
+
+     Write a function to determine the number of bits you would need to flip to covert integer A to integer B.
+
+     EXAMPLE
+     11111111
+
+     Input: 29 (or: 11101), 15 (or: 01111)
+     Output: 2
+    */
+    func test_5_6_Conversion() {
+        XCTAssertEqual(bitsToFlip(29, 15), 2)
+        XCTAssertEqual(bitsToFlip(255, 0), 8)
+    }
+
 }

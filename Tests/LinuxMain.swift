@@ -18,7 +18,8 @@ extension ArrayAndStringTests {
 }
 extension BitManipulationTests {
   static var allTests: [(String, (BitManipulationTests) -> () throws -> Void)] = [
-    ("test_5_1_Insertion", test_5_1_Insertion)
+    ("test_5_1_Insertion", test_5_1_Insertion),
+    ("test_5_6_Conversion", test_5_6_Conversion)
   ]
 }
 extension LinkedListsTests {

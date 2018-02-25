@@ -5,6 +5,22 @@
 
 Solutions of Cracking The Coding Interview written in Swift.
 
+## Tests
+
+Tests are updated by using [Sourcery](https://github.com/krzysztofzablocki/Sourcery). When editing tests (add, remove, disable, enable tests) run `sourcery` from the root folder. You can unzip `sourcery`'s [latest binary](https://github.com/krzysztofzablocki/Sourcery/releases) and put the `bin` directory in the root directory, then run `bin/sourcery` from the root directory.
+
+Run the test by using SPM's test command:
+
+```bash
+$ swift test
+```
+
+You can also run individual tests by using its number.
+
+```bash
+$ swift test --filter 2.1
+```
+
 ## Solved Problems
 
 - ArrayAndString
@@ -18,6 +34,7 @@ Solutions of Cracking The Coding Interview written in Swift.
   - 1.9.StringRotation
 - BitManipulation
   - 5.1.Insertion
+  - 5.6.Conversion
 - LinkedLists
   - 2.1.RemoveDups
   - 2.2.ReturnKthToLast
@@ -36,22 +53,6 @@ Solutions of Cracking The Coding Interview written in Swift.
   - 4.5.ValidateBST
   - 4.7.BuildOrder
   - 4.8.FirstCommonAncestor
-
-## Tests
-
-Tests are updated by using [Sourcery](https://github.com/krzysztofzablocki/Sourcery). When editing tests (add, remove, disable, enable tests) run `sourcery` from the root folder. You can unzip `sourcery`'s [latest binary](https://github.com/krzysztofzablocki/Sourcery/releases) and put the `bin` directory in the root directory, then run `bin/sourcery` from the root directory.
-
-Run the test by using SPM's test command:
-
-```bash
-$ swift test
-```
-
-You can also run individual tests by using its number.
-
-```bash
-$ swift test --filter 2.1
-```
 
 ## License
 
