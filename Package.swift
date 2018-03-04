@@ -23,6 +23,7 @@ let package = Package(
             dependencies: [ "DataStructure" ]
         ),
         .target(name: "BitManipulationQuestions"),
+        .target(name: "RecursionAndDynamicProgrammingQuestions"),
 
         .testTarget(
             name: "CrackingTests",
@@ -32,6 +33,7 @@ let package = Package(
                 "StacksAndQueuesQuestions",
                 "TreesAndGraphsQuestions",
                 "BitManipulationQuestions",
+                "RecursionAndDynamicProgrammingQuestions"
             ]
         )
     ]

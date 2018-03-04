@@ -42,6 +42,8 @@ $ swift test --filter 2.1
   - 2.6.Palindrome
   - 2.7.Intersection
   - 2.8.LoopDetection
+- RecursionAndDynamicProgramming
+  - 8.1.TripleSteps
 - StacksAndQueues
   - 3.2.StackMin
   - 3.4.QueueViaStacks
