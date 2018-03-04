@@ -52,4 +52,14 @@ class RecursionAndDynamicProgrammingTests: XCTestCase {
         XCTAssertEqual(result.count, 16)
     }
 
+    /**
+     8.5: Recursive Multiply
+
+     Write a recursive function to multiply two positive integers without using the * operator. You can use addition, subtraction, and bit shifting, but you should minimize the number of those operations.
+    */
+    func test_8_5_RecursiveMultiply() {
+        XCTAssertEqual(recursiveMultiply(124, 31), 3844)
+        XCTAssertEqual(recursiveMultiply2(124, 31), 3844)
+    }
+
 }

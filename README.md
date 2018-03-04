@@ -46,6 +46,7 @@ $ swift test --filter 2.1
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid
   - 8.4.PowerSet
+  - 8.5.RecursiveMultiply
 - StacksAndQueues
   - 3.2.StackMin
   - 3.4.QueueViaStacks
