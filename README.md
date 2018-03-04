@@ -44,6 +44,7 @@ $ swift test --filter 2.1
   - 2.8.LoopDetection
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
+  - 8.2.RobotInAGrid
 - StacksAndQueues
   - 3.2.StackMin
   - 3.4.QueueViaStacks
