@@ -35,7 +35,8 @@ extension LinkedListsTests {
 extension RecursionAndDynamicProgrammingTests {
   static var allTests: [(String, (RecursionAndDynamicProgrammingTests) -> () throws -> Void)] = [
     ("test_8_1_TripleSteps", test_8_1_TripleSteps),
-    ("test_8_2_RobotInAGrid", test_8_2_RobotInAGrid)
+    ("test_8_2_RobotInAGrid", test_8_2_RobotInAGrid),
+    ("test_8_4_PowerSet", test_8_4_PowerSet)
   ]
 }
 extension StacksAndQueuesTests {

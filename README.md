@@ -45,6 +45,7 @@ $ swift test --filter 2.1
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid
+  - 8.4.PowerSet
 - StacksAndQueues
   - 3.2.StackMin
   - 3.4.QueueViaStacks

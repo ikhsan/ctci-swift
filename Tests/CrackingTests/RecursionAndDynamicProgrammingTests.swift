@@ -42,4 +42,14 @@ class RecursionAndDynamicProgrammingTests: XCTestCase {
         ])
     }
 
+    /**
+     8.4: Power Set
+
+     Write a method to return all subsets of a set
+    */
+    func test_8_4_PowerSet() {
+        let result = allSubset(["b", "e", "c", "a"])
+        XCTAssertEqual(result.count, 16)
+    }
+
 }
