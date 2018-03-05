@@ -62,4 +62,23 @@ class RecursionAndDynamicProgrammingTests: XCTestCase {
         XCTAssertEqual(recursiveMultiply2(124, 31), 3844)
     }
 
+    /**
+     8.9: Parens
+
+     Implement an alforithm to rpint all valid (e.g., properly opened and closed) combinations of n pairs of parentheses
+
+     EXAMPLE
+
+     Input: 3
+
+     Output: ((())), (()()), (())(), ()(()), ()()()
+    */
+    func test_8_9_Parens() {
+        XCTAssertEqual(generateParentheses(3), ["((()))", "(()())", "(())()", "()(())", "()()()"])
+        XCTAssertEqual(generateParentheses(4), [
+          "((()))()", "(()())()", "((()()))", "(()()())", "(()(()))", "()()(())", "()()()()",
+          "()((()))", "()(()())", "()(())()", "(((())))", "((())())", "(())()()"
+        ])
+    }
+
 }
