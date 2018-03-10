@@ -38,7 +38,8 @@ extension RecursionAndDynamicProgrammingTests {
     ("test_8_2_RobotInAGrid", test_8_2_RobotInAGrid),
     ("test_8_4_PowerSet", test_8_4_PowerSet),
     ("test_8_5_RecursiveMultiply", test_8_5_RecursiveMultiply),
-    ("test_8_9_Parens", test_8_9_Parens)
+    ("test_8_9_Parens", test_8_9_Parens),
+    ("test_8_11_Coins", test_8_11_Coins)
   ]
 }
 extension StacksAndQueuesTests {
