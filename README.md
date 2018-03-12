@@ -49,6 +49,8 @@ $ swift test --filter 2.1
   - 8.5.RecursiveMultiply
   - 8.9.Parens
   - 8.11.Coins
+- SortingAndSearching
+  - 10.1.SortedMerge
 - StacksAndQueues
   - 3.2.StackMin
   - 3.4.QueueViaStacks

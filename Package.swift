@@ -24,6 +24,7 @@ let package = Package(
         ),
         .target(name: "BitManipulationQuestions"),
         .target(name: "RecursionAndDynamicProgrammingQuestions"),
+        .target(name: "SortingAndSearchingQuestions"),
 
         .testTarget(
             name: "CrackingTests",
@@ -33,7 +34,8 @@ let package = Package(
                 "StacksAndQueuesQuestions",
                 "TreesAndGraphsQuestions",
                 "BitManipulationQuestions",
-                "RecursionAndDynamicProgrammingQuestions"
+                "RecursionAndDynamicProgrammingQuestions",
+                "SortingAndSearchingQuestions",
             ]
         )
     ]

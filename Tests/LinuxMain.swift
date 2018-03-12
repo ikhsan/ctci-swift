@@ -42,6 +42,11 @@ extension RecursionAndDynamicProgrammingTests {
     ("test_8_11_Coins", test_8_11_Coins)
   ]
 }
+extension SortingAndSearchingTests {
+  static var allTests: [(String, (SortingAndSearchingTests) -> () throws -> Void)] = [
+    ("test_10_1_SortedMerge", test_10_1_SortedMerge)
+  ]
+}
 extension StacksAndQueuesTests {
   static var allTests: [(String, (StacksAndQueuesTests) -> () throws -> Void)] = [
     ("test_3_2_StackMin", test_3_2_StackMin),
@@ -66,6 +71,7 @@ XCTMain([
   testCase(BitManipulationTests.allTests),
   testCase(LinkedListsTests.allTests),
   testCase(RecursionAndDynamicProgrammingTests.allTests),
+  testCase(SortingAndSearchingTests.allTests),
   testCase(StacksAndQueuesTests.allTests),
   testCase(TreesAndGraphsTests.allTests),
 ])
