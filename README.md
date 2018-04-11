@@ -42,6 +42,8 @@ $ swift test --filter 2.1
   - 2.6.Palindrome
   - 2.7.Intersection
   - 2.8.LoopDetection
+- Moderate
+  - 16.1.NumberSwap
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid

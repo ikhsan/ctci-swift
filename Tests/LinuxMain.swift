@@ -32,6 +32,11 @@ extension LinkedListsTests {
     ("test_2_8_LoopDetection", test_2_8_LoopDetection)
   ]
 }
+extension ModerateTests {
+  static var allTests: [(String, (ModerateTests) -> () throws -> Void)] = [
+    ("test_16_1_NumberSwap", test_16_1_NumberSwap)
+  ]
+}
 extension RecursionAndDynamicProgrammingTests {
   static var allTests: [(String, (RecursionAndDynamicProgrammingTests) -> () throws -> Void)] = [
     ("test_8_1_TripleSteps", test_8_1_TripleSteps),
@@ -70,6 +75,7 @@ XCTMain([
   testCase(ArrayAndStringTests.allTests),
   testCase(BitManipulationTests.allTests),
   testCase(LinkedListsTests.allTests),
+  testCase(ModerateTests.allTests),
   testCase(RecursionAndDynamicProgrammingTests.allTests),
   testCase(SortingAndSearchingTests.allTests),
   testCase(StacksAndQueuesTests.allTests),
