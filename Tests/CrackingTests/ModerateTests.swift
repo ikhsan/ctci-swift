@@ -19,4 +19,14 @@ class ModerateTests: XCTestCase {
       XCTAssertEqual(b, -3)
     }
 
+    /**
+     16.3. Count trailing zero for factorial
+    */
+    func test_16_3_CountZeroFactorial() {
+        XCTAssertEqual(countZeroFactorial(1), 0)
+        XCTAssertEqual(countZeroFactorial(6), 1)
+        XCTAssertEqual(countZeroFactorial(28), 6)
+        XCTAssertEqual(countZeroFactorial(129), 31)
+    }
+
 }

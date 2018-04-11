@@ -44,6 +44,7 @@ $ swift test --filter 2.1
   - 2.8.LoopDetection
 - Moderate
   - 16.1.NumberSwap
+  - 16.3.CountZeroFactorial
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid

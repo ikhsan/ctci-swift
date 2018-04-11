@@ -34,7 +34,8 @@ extension LinkedListsTests {
 }
 extension ModerateTests {
   static var allTests: [(String, (ModerateTests) -> () throws -> Void)] = [
-    ("test_16_1_NumberSwap", test_16_1_NumberSwap)
+    ("test_16_1_NumberSwap", test_16_1_NumberSwap),
+    ("test_16_3_CountZeroFactorial", test_16_3_CountZeroFactorial)
   ]
 }
 extension RecursionAndDynamicProgrammingTests {
