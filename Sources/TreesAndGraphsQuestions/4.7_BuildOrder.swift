@@ -32,7 +32,7 @@ public func order(_ graph: Graph<Project>) -> [Project] {
         buildIndex += 1
     }
 
-    return result.flatMap { $0 }
+    return result.compactMap { $0 }
 }
 
 // MARK: - Solution #2

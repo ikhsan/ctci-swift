@@ -32,7 +32,7 @@ public func listOfDepth<T>(_ tree: BinaryTree<T>) -> DepthList<T> {
         if levelSize == 0 {
             // backfill
             levelSize = q.count
-            let levelList = backfill(q.flatMap { $0.value })
+            let levelList = backfill(q.compactMap { $0.value })
 
             let node = DepthList<T>.Node(levelList)
             if list.head == nil {
