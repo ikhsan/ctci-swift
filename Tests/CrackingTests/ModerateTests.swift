@@ -4,6 +4,9 @@ import XCTest
 class ModerateTests: XCTestCase {
 
     /**
+     16.1: Number Swapper
+
+     Wite a function to swap a number in place (that is, without temporary variable).
     */
     func test_16_1_NumberSwap() {
       var a = 1
@@ -20,7 +23,9 @@ class ModerateTests: XCTestCase {
     }
 
     /**
-     16.3. Count trailing zero for factorial
+     16.5: Factorial Zeros
+
+     Write an algorithm which computes the number of trailing zeros in n factorial
     */
     func test_16_3_CountZeroFactorial() {
         XCTAssertEqual(countZeroFactorial(1), 0)
@@ -30,7 +35,9 @@ class ModerateTests: XCTestCase {
     }
 
     /**
-     16.4 Find minimum differences
+     16.6: Smallest Difference
+
+     Given two arrays of integers, compute the pair of values (one value in each array) with the smallest (non-negative) difference. Return the difference.
     */
     func test_16_4_FindMinDiff() {
         XCTAssertNil(minDiff([], []))
