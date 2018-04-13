@@ -29,4 +29,13 @@ class ModerateTests: XCTestCase {
         XCTAssertEqual(countZeroFactorial(129), 31)
     }
 
+    /**
+     16.4 Find minimum differences
+    */
+    func test_16_4_FindMinDiff() {
+        XCTAssertNil(minDiff([], []))
+        XCTAssertEqual(minDiff([1, 3, 15, 11, 2], [23, 127, 235, 19, 8]), 3)
+        XCTAssertEqual(minDiff([1, 3, 15, 11], [23, 235, 15, 19, 8]), 0)
+    }
+
 }

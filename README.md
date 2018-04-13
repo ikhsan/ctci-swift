@@ -45,6 +45,7 @@ $ swift test --filter 2.1
 - Moderate
   - 16.1.NumberSwap
   - 16.3.CountZeroFactorial
+  - 16.4.FindMinDiff
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid
