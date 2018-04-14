@@ -44,6 +44,7 @@ $ swift test --filter 2.1
   - 2.8.LoopDetection
 - Moderate
   - 16.1.NumberSwap
+  - 16.2.WordFrequencies
   - 16.3.CountZeroFactorial
   - 16.4.FindMinDiff
 - RecursionAndDynamicProgramming
