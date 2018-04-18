@@ -22,23 +22,23 @@ class RecursionAndDynamicProgrammingTests: XCTestCase {
      Imagine a robot sitting on the upper left corner of grid r rows and c columns. The robot can only move in two directions, right and down, but certain cells are "off limits" such that the robot cannot step on them. Design an algorithm to find a path for the robot from the top left to the bottom right.
     */
     func test_8_2_RobotInAGrid() {
-        assertPointsEqual(getPath(grid: [
+        XCTAssertEqual(getPath(grid: [
             [0, 0, 1],
             [1, 0, 0],
             [1, 1, 0],
         ]),
         [
-            (0,0), (0,1), (1,1), (1,2), (2,2)
+            Point(0,0), Point(0,1), Point(1,1), Point(1,2), Point(2,2)
         ])
 
-        assertPointsEqual(getPath(grid: [
+        XCTAssertEqual(getPath(grid: [
             [0, 0, 1, 0],
             [0, 0, 1, 0],
             [1, 0, 0, 0],
             [1, 1, 0, 0],
         ]),
         [
-            (0,0), (0,1), (1,1), (2,1), (2,2), (2,3), (3,3)
+            Point(0,0), Point(0,1), Point(1,1), Point(2,1), Point(2,2), Point(2,3), Point(3,3)
         ])
     }
 

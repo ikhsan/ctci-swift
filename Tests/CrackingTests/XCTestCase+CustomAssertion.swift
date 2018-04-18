@@ -12,13 +12,4 @@ extension XCTestCase {
             }
         }
     }
-
-    func assertPointsEqual<T: Equatable>(_ lhs: [(T, T)], _ rhs: [(T, T)], file: StaticString = #file, line: UInt = #line) {
-        XCTAssertEqual(lhs.count, rhs.count, file: file, line: line)
-        for (index, leftTuple) in lhs.enumerated() {
-            let rightTuple = rhs[index]
-            XCTAssertEqual(leftTuple.0, rightTuple.0, file: file, line: line)
-            XCTAssertEqual(leftTuple.1, rightTuple.1, file: file, line: line)
-        }
-    }
 }
