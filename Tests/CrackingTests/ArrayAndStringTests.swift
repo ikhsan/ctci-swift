@@ -94,7 +94,7 @@ class ArrayAndStringTests: XCTestCase {
         let matrix1 = [ [1] ]
         let expected1 = [ [1] ]
 
-        assertMatrixEqual(rotate(matrix: matrix1), expected1)
+        XCTAssertEqual(rotate(matrix: matrix1), expected1)
 
         let matrix2 = [
             [1, 2],
@@ -104,7 +104,7 @@ class ArrayAndStringTests: XCTestCase {
             [3, 1],
             [4, 2],
         ]
-        assertMatrixEqual(rotate(matrix: matrix2), expected2)
+        XCTAssertEqual(rotate(matrix: matrix2), expected2)
 
         let matrix3 = [
             [1, 2, 3],
@@ -116,7 +116,7 @@ class ArrayAndStringTests: XCTestCase {
             [8, 5, 2],
             [9, 6, 3],
         ]
-        assertMatrixEqual(rotate(matrix: matrix3), expected3)
+        XCTAssertEqual(rotate(matrix: matrix3), expected3)
 
         let matrix4 = [
             [1, 2, 3, 4],
@@ -130,7 +130,7 @@ class ArrayAndStringTests: XCTestCase {
             [15, 11, 7, 3],
             [16, 12, 8, 4],
         ]
-        assertMatrixEqual(rotate(matrix: matrix4), expected4)
+        XCTAssertEqual(rotate(matrix: matrix4), expected4)
     }
 
     /**
@@ -149,7 +149,7 @@ class ArrayAndStringTests: XCTestCase {
             [0, 0, 0, 0],
             [9, 10, 0, 12],
         ]
-        assertMatrixEqual(zero(matrix: matrix), expected)
+        XCTAssertEqual(zero(matrix: matrix), expected)
     }
 
     /**
