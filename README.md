@@ -31,6 +31,7 @@ $ swift test --filter 2.1
   - 1.5.OneAway
   - 1.6.StringCompression
   - 1.7.RotateMatrix
+  - 1.8.ZeroMatrix
   - 1.9.StringRotation
 - BitManipulation
   - 5.1.Insertion

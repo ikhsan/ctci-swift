@@ -13,6 +13,7 @@ extension ArrayAndStringTests {
     ("test_1_5_OneAway", test_1_5_OneAway),
     ("test_1_6_StringCompression", test_1_6_StringCompression),
     ("test_1_7_RotateMatrix", test_1_7_RotateMatrix),
+    ("test_1_8_ZeroMatrix", test_1_8_ZeroMatrix),
     ("test_1_9_StringRotation", test_1_9_StringRotation)
   ]
 }

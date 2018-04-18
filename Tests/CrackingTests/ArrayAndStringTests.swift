@@ -138,18 +138,31 @@ class ArrayAndStringTests: XCTestCase {
 
      Write an algorithm such that if an element in a n MxN matrix is 0, its entire row and column are set to 0.
      */
-    func _test_1_8_ZeroMatrix() {
-        let matrix = [
+    func test_1_8_ZeroMatrix() {
+        var matrix = [
             [1, 2, 3, 4],
-            [5, 6, 0, 8],
+            [0, 6, 0, 8],
             [9, 10, 11, 12],
         ]
-        let expected = [
-            [1, 2, 0, 4],
+        zero(matrix: &matrix)
+
+        XCTAssertEqual(matrix, [
+            [0, 2, 0, 4],
             [0, 0, 0, 0],
-            [9, 10, 0, 12],
+            [0, 10, 0, 12],
+        ])
+
+        var matrix2 = [
+            [1, 2, 0, 4],
+            [0, 6, 7, 8],
+            [9, 10, 11, 12],
         ]
-        XCTAssertEqual(zero(matrix: matrix), expected)
+        zero(matrix: &matrix2)
+        XCTAssertEqual(matrix2, [
+            [0, 0, 0, 0],
+            [0, 0, 0, 0],
+            [0, 10, 0, 12],
+        ])
     }
 
     /**
