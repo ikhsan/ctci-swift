@@ -48,6 +48,7 @@ $ swift test --filter 2.1
   - 16.2.WordFrequencies
   - 16.3.CountZeroFactorial
   - 16.4.FindMinDiff
+  - 16.15.MasterMind
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid

@@ -59,4 +59,25 @@ class ModerateTests: XCTestCase {
         XCTAssertEqual(minDiff([1, 3, 15, 11], [23, 235, 15, 19, 8]), 0)
     }
 
+    /**
+     16.15: Master Mind
+
+     The Game of Master Mind is played as follows:
+     
+     The computer has four slots, and each slot will contain a ball that is red (R), yellow (Y), green (G) or blue (B). For example, the computer might have RGGB (Slot #1 is red, Slots #2 and #3 are green, Slot #4 is blue).
+
+     When you guess the correct color for the correct slot, you get a "hit". If you guess a color taht exists but is in the wrong slot, you get a "pseudo-hit". Note that a slot that is a hit can never count as a pseudo-hit.
+
+     For example, if the actual solution is RGBY and you guess GGRR, you have one hit and one pseudo-hit.
+
+     Write a method that, given a guess and a solution, retruns the number of hits and pseudo-hits.
+    */
+    func test_16_15_MasterMind() {
+        // tuple of (hit, pseudo-hit)
+        XCTAssert(masterMind(solution: "RGBY", guess: "RGBY") == (4, 0))
+        XCTAssert(masterMind(solution: "RGBY", guess: "GBYR") == (0, 4))
+        XCTAssert(masterMind(solution: "RGBB", guess: "YYYY") == (0, 0))
+        XCTAssert(masterMind(solution: "RGBY", guess: "GGRR") == (1, 1))
+        XCTAssert(masterMind(solution: "RGGB", guess: "YRGB") == (2, 1))
+    }
 }
