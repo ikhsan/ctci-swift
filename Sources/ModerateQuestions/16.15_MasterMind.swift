@@ -1,8 +1,8 @@
 import Foundation
 
 public func masterMind(solution: String, guess: String) -> (Int, Int) {
-    let sol = Array(solution.characters)
-    let gss = Array(guess.characters)
+    let sol = Array(solution)
+    let gss = Array(guess)
 
     guard sol.count == 4 && gss.count == 4 else { return (-1, -1) }
 
