@@ -39,7 +39,8 @@ extension ModerateTests {
     ("test_16_2_WordFrequencies", test_16_2_WordFrequencies),
     ("test_16_3_CountZeroFactorial", test_16_3_CountZeroFactorial),
     ("test_16_4_FindMinDiff", test_16_4_FindMinDiff),
-    ("test_16_15_MasterMind", test_16_15_MasterMind)
+    ("test_16_15_MasterMind", test_16_15_MasterMind),
+    ("test_16_19_PondSize", test_16_19_PondSize)
   ]
 }
 extension RecursionAndDynamicProgrammingTests {
