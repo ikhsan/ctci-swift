@@ -54,6 +54,7 @@ $ swift test --filter 2.1
   - 16.11.DivingBoard
   - 16.17.ContiguousSequence
   - 16.21.SumSwap
+  - 16.13.XMLEncoding
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid

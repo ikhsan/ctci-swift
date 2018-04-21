@@ -154,4 +154,33 @@ class ModerateTests: XCTestCase {
         let res2 = sumSwap([3, 6, 3, 3], [4, 1, 2, 1, 1, 2])!
         XCTAssert(res2 == (3, 1) || res2 == (6, 4))
     }
+
+    /**
+     16.12: XML Encoding
+
+     Since XML is very verbose, you are given a way of encoding it where each tag gets mapped to a pre-defined integer value. The language/grammar is as follows:
+     
+     Element    --> Tag Attributes END Children END
+     Attribute  --> Tag Value
+     END        --> 0
+     Tag        --> some predefined mapping to int
+     Value      --> string value
+
+     For example, the following XML might be converted into the compressed string below (assuming a mapping of
+     - family       -> 1
+     - person       -> 2
+     - firstName    -> 3
+     - lastName     -> 4
+     - state        -> 5
+
+     Write code to print the encoded version of an XML element (passed in Element and Attribute objects).
+    */
+    func test_16_13_XMLEncoding() {
+        let xml = """
+        <family lastName="McDowell" state="CA">
+            <person firstName="Gayle">Some Message</person>
+        </family>
+        """
+        XCTAssertEqual(encode(xml: xml), "1 4 McDowell 5 CA 0 2 3 Gayle 0 Some Message 0 0")
+    }
 }

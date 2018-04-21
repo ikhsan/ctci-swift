@@ -44,7 +44,8 @@ extension ModerateTests {
     ("test_16_8_EnglishInt", test_16_8_EnglishInt),
     ("test_16_11_DivingBoard", test_16_11_DivingBoard),
     ("test_16_17_ContiguousSequence", test_16_17_ContiguousSequence),
-    ("test_16_21_SumSwap", test_16_21_SumSwap)
+    ("test_16_21_SumSwap", test_16_21_SumSwap),
+    ("test_16_13_XMLEncoding", test_16_13_XMLEncoding)
   ]
 }
 extension RecursionAndDynamicProgrammingTests {
