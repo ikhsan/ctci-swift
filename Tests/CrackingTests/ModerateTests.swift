@@ -84,7 +84,7 @@ class ModerateTests: XCTestCase {
     /**
      16.19: Pond Sizes
 
-    You have an integer matrix representing a plot of land, where the value at that location represents the height above sea level. A value of zero indicates water. A pond is a region of water connected vertically, horizontally, or diagonally. The size of the pond is the total number of connected water cells. Write a method to compute the sizes of all ponds in the matrix.
+     You have an integer matrix representing a plot of land, where the value at that location represents the height above sea level. A value of zero indicates water. A pond is a region of water connected vertically, horizontally, or diagonally. The size of the pond is the total number of connected water cells. Write a method to compute the sizes of all ponds in the matrix.
     */
     func test_16_19_PondSize() {
         var pond = [
@@ -103,5 +103,17 @@ class ModerateTests: XCTestCase {
 
         var pond2 = [[1]]
         XCTAssertEqual(getPondSizes(&pond2), [])
+    }
+
+    /**
+     16.8: English Int
+
+     Given any integer, print an English phrase that describes the integer
+    */
+    func test_16_8_EnglishInt() {
+        XCTAssertEqual(english(for: 0), "Zero")
+        XCTAssertEqual(english(for: 12), "Twelve")
+        XCTAssertEqual(english(for: 1_234), "One Thousand, Two Hundred Thirty Four")
+        XCTAssertEqual(english(for: 14_101_023), "Fourteen Million, One Hundred One Thousand, Twenty Three")
     }
 }

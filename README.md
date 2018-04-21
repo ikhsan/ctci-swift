@@ -50,6 +50,7 @@ $ swift test --filter 2.1
   - 16.4.FindMinDiff
   - 16.15.MasterMind
   - 16.19.PondSize
+  - 16.8.EnglishInt
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid
