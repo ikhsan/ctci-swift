@@ -43,6 +43,7 @@ extension ModerateTests {
     ("test_16_19_PondSize", test_16_19_PondSize),
     ("test_16_8_EnglishInt", test_16_8_EnglishInt),
     ("test_16_17_ContiguousSequence", test_16_17_ContiguousSequence),
+    ("test_16_21_SumSwap", test_16_21_SumSwap)
   ]
 }
 extension RecursionAndDynamicProgrammingTests {

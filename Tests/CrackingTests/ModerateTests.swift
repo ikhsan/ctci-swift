@@ -133,6 +133,14 @@ class ModerateTests: XCTestCase {
 
      Given two arrays of integers, find a pair of values (one value from each array) that you can swap to give the two arrays the same sum.
     */
-    func _test_16_21_Sum_Swap() {        
+    func test_16_21_SumSwap() {
+        XCTAssertNil(sumSwap([], []))
+        XCTAssertNil(sumSwap([4, 2], [3, 2]))
+
+        let res = sumSwap([4, 1, 2, 1, 1, 2], [3, 6, 3, 3])!
+        XCTAssert(res == (1, 3) || res == (4, 6))
+
+        let res2 = sumSwap([3, 6, 3, 3], [4, 1, 2, 1, 1, 2])!
+        XCTAssert(res2 == (3, 1) || res2 == (6, 4))
     }
 }
