@@ -51,6 +51,7 @@ $ swift test --filter 2.1
   - 16.15.MasterMind
   - 16.19.PondSize
   - 16.8.EnglishInt
+  - 16.11.DivingBoard
   - 16.17.ContiguousSequence
   - 16.21.SumSwap
 - RecursionAndDynamicProgramming

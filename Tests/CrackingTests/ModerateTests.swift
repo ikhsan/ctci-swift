@@ -118,6 +118,17 @@ class ModerateTests: XCTestCase {
     }
 
     /**
+     16.11: Diving Board
+
+     You are building a diving board by placing a bunch of planks of weed end-to-end. There are two types of planks, one of length `shorter` and one of length `longer`. You must use exactly K planks of wood. Write a method to generate all possible lengths for the diving board.
+    */    
+    
+    func test_16_11_DivingBoard() {
+        XCTAssertEqual(allLengthsForBoard(length1: 3, length2: 5, k: 1), [3, 5])
+        XCTAssertEqual(allLengthsForBoard(length1: 3, length2: 5, k: 3), [9, 11, 13, 15])
+    }
+
+    /**
      16.17: Contiguous Sequence
 
      You are given an array of integers (both positive and negative). Find the contiguous sequence with the largest sum. Return the sum.
