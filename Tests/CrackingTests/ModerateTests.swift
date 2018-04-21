@@ -116,4 +116,23 @@ class ModerateTests: XCTestCase {
         XCTAssertEqual(english(for: 1_234), "One Thousand, Two Hundred Thirty Four")
         XCTAssertEqual(english(for: 14_101_023), "Fourteen Million, One Hundred One Thousand, Twenty Three")
     }
+
+    /**
+     16.17: Contiguous Sequence
+
+     You are given an array of integers (both positive and negative). Find the contiguous sequence with the largest sum. Return the sum.
+    */
+    func test_16_17_ContiguousSequence() {
+        XCTAssertEqual(largestSum([8]), 8)
+        XCTAssertEqual(largestSum([2, -8, 3, -2, 4, -10]), 5)
+        XCTAssertEqual(largestSum([-2, 3, 2, -1]), 5)
+    }
+
+    /**
+     16.21: Sum Swap
+
+     Given two arrays of integers, find a pair of values (one value from each array) that you can swap to give the two arrays the same sum.
+    */
+    func _test_16_21_Sum_Swap() {        
+    }
 }
