@@ -16,14 +16,11 @@ private let tags: [String : String] = [
 ]
 
 private func encode(node: XMLNode) -> String {
-    if node.kind == .text {
+    guard let element = node as? XMLElement else {
         return node.stringValue ?? ""
     }
 
-    guard let element = node as? XMLElement,
-        let name = element.name,
-        let tag = tags[name]
-        else { return "" }
+    guard let name = element.name, let tag = tags[name] else { return "" }
 
     let attributes = (element.attributes ?? []).reduce(into: "") { memo, attr in
         let key = attr.name ?? ""
