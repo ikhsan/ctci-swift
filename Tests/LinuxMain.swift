@@ -39,13 +39,13 @@ extension ModerateTests {
     ("test_16_2_WordFrequencies", test_16_2_WordFrequencies),
     ("test_16_3_CountZeroFactorial", test_16_3_CountZeroFactorial),
     ("test_16_4_FindMinDiff", test_16_4_FindMinDiff),
-    ("test_16_15_MasterMind", test_16_15_MasterMind),
-    ("test_16_19_PondSize", test_16_19_PondSize),
     ("test_16_8_EnglishInt", test_16_8_EnglishInt),
     ("test_16_11_DivingBoard", test_16_11_DivingBoard),
+    ("test_16_13_XMLEncoding", test_16_13_XMLEncoding),
+    ("test_16_15_MasterMind", test_16_15_MasterMind),
     ("test_16_17_ContiguousSequence", test_16_17_ContiguousSequence),
-    ("test_16_21_SumSwap", test_16_21_SumSwap),
-    ("test_16_13_XMLEncoding", test_16_13_XMLEncoding)
+    ("test_16_19_PondSize", test_16_19_PondSize),
+    ("test_16_21_SumSwap", test_16_21_SumSwap)
   ]
 }
 extension RecursionAndDynamicProgrammingTests {

@@ -60,52 +60,6 @@ class ModerateTests: XCTestCase {
     }
 
     /**
-     16.15: Master Mind
-
-     The Game of Master Mind is played as follows:
-     
-     The computer has four slots, and each slot will contain a ball that is red (R), yellow (Y), green (G) or blue (B). For example, the computer might have RGGB (Slot #1 is red, Slots #2 and #3 are green, Slot #4 is blue).
-
-     When you guess the correct color for the correct slot, you get a "hit". If you guess a color taht exists but is in the wrong slot, you get a "pseudo-hit". Note that a slot that is a hit can never count as a pseudo-hit.
-
-     For example, if the actual solution is RGBY and you guess GGRR, you have one hit and one pseudo-hit.
-
-     Write a method that, given a guess and a solution, retruns the number of hits and pseudo-hits.
-    */
-    func test_16_15_MasterMind() {
-        // tuple of (hit, pseudo-hit)
-        XCTAssert(masterMind(solution: "RGBY", guess: "RGBY") == (4, 0))
-        XCTAssert(masterMind(solution: "RGBY", guess: "GBYR") == (0, 4))
-        XCTAssert(masterMind(solution: "RGBB", guess: "YYYY") == (0, 0))
-        XCTAssert(masterMind(solution: "RGBY", guess: "GGRR") == (1, 1))
-        XCTAssert(masterMind(solution: "RGGB", guess: "YRGB") == (2, 1))
-    }
-
-    /**
-     16.19: Pond Sizes
-
-     You have an integer matrix representing a plot of land, where the value at that location represents the height above sea level. A value of zero indicates water. A pond is a region of water connected vertically, horizontally, or diagonally. The size of the pond is the total number of connected water cells. Write a method to compute the sizes of all ponds in the matrix.
-    */
-    func test_16_19_PondSize() {
-        var pond = [
-            [0, 2, 1, 0],
-            [0, 1, 0, 1],
-            [1, 1, 0, 1],
-            [0, 1, 0, 1]
-        ]
-        XCTAssertEqual(getPondSizes(&pond), [1, 2, 4])
-
-        var emptyPond: [[Int]] = []
-        XCTAssertEqual(getPondSizes(&emptyPond), [])
-
-        var pond1 = [[0]]
-        XCTAssertEqual(getPondSizes(&pond1), [1])
-
-        var pond2 = [[1]]
-        XCTAssertEqual(getPondSizes(&pond2), [])
-    }
-
-    /**
      16.8: English Int
 
      Given any integer, print an English phrase that describes the integer
@@ -122,37 +76,9 @@ class ModerateTests: XCTestCase {
 
      You are building a diving board by placing a bunch of planks of weed end-to-end. There are two types of planks, one of length `shorter` and one of length `longer`. You must use exactly K planks of wood. Write a method to generate all possible lengths for the diving board.
     */    
-    
     func test_16_11_DivingBoard() {
         XCTAssertEqual(allLengthsForBoard(length1: 3, length2: 5, k: 1), [3, 5])
         XCTAssertEqual(allLengthsForBoard(length1: 3, length2: 5, k: 3), [9, 11, 13, 15])
-    }
-
-    /**
-     16.17: Contiguous Sequence
-
-     You are given an array of integers (both positive and negative). Find the contiguous sequence with the largest sum. Return the sum.
-    */
-    func test_16_17_ContiguousSequence() {
-        XCTAssertEqual(largestSum([8]), 8)
-        XCTAssertEqual(largestSum([2, -8, 3, -2, 4, -10]), 5)
-        XCTAssertEqual(largestSum([-2, 3, 2, -1]), 5)
-    }
-
-    /**
-     16.21: Sum Swap
-
-     Given two arrays of integers, find a pair of values (one value from each array) that you can swap to give the two arrays the same sum.
-    */
-    func test_16_21_SumSwap() {
-        XCTAssertNil(sumSwap([], []))
-        XCTAssertNil(sumSwap([4, 2], [3, 2]))
-
-        let res = sumSwap([4, 1, 2, 1, 1, 2], [3, 6, 3, 3])!
-        XCTAssert(res == (1, 3) || res == (4, 6))
-
-        let res2 = sumSwap([3, 6, 3, 3], [4, 1, 2, 1, 1, 2])!
-        XCTAssert(res2 == (3, 1) || res2 == (6, 4))
     }
 
     /**
@@ -183,4 +109,78 @@ class ModerateTests: XCTestCase {
         """
         XCTAssertEqual(encode(xml: xml), "1 4 McDowell 5 CA 0 2 3 Gayle 0 Some Message 0 0")
     }
+
+    /**
+     16.15: Master Mind
+
+     The Game of Master Mind is played as follows:
+     
+     The computer has four slots, and each slot will contain a ball that is red (R), yellow (Y), green (G) or blue (B). For example, the computer might have RGGB (Slot #1 is red, Slots #2 and #3 are green, Slot #4 is blue).
+
+     When you guess the correct color for the correct slot, you get a "hit". If you guess a color taht exists but is in the wrong slot, you get a "pseudo-hit". Note that a slot that is a hit can never count as a pseudo-hit.
+
+     For example, if the actual solution is RGBY and you guess GGRR, you have one hit and one pseudo-hit.
+
+     Write a method that, given a guess and a solution, retruns the number of hits and pseudo-hits.
+    */
+    func test_16_15_MasterMind() {
+        // tuple of (hit, pseudo-hit)
+        XCTAssert(masterMind(solution: "RGBY", guess: "RGBY") == (4, 0))
+        XCTAssert(masterMind(solution: "RGBY", guess: "GBYR") == (0, 4))
+        XCTAssert(masterMind(solution: "RGBB", guess: "YYYY") == (0, 0))
+        XCTAssert(masterMind(solution: "RGBY", guess: "GGRR") == (1, 1))
+        XCTAssert(masterMind(solution: "RGGB", guess: "YRGB") == (2, 1))
+    }
+
+    /**
+     16.17: Contiguous Sequence
+
+     You are given an array of integers (both positive and negative). Find the contiguous sequence with the largest sum. Return the sum.
+    */
+    func test_16_17_ContiguousSequence() {
+        XCTAssertEqual(largestSum([8]), 8)
+        XCTAssertEqual(largestSum([2, -8, 3, -2, 4, -10]), 5)
+        XCTAssertEqual(largestSum([-2, 3, 2, -1]), 5)
+    }
+
+    /**
+     16.19: Pond Sizes
+
+     You have an integer matrix representing a plot of land, where the value at that location represents the height above sea level. A value of zero indicates water. A pond is a region of water connected vertically, horizontally, or diagonally. The size of the pond is the total number of connected water cells. Write a method to compute the sizes of all ponds in the matrix.
+    */
+    func test_16_19_PondSize() {
+        var pond = [
+            [0, 2, 1, 0],
+            [0, 1, 0, 1],
+            [1, 1, 0, 1],
+            [0, 1, 0, 1]
+        ]
+        XCTAssertEqual(getPondSizes(&pond), [1, 2, 4])
+
+        var emptyPond: [[Int]] = []
+        XCTAssertEqual(getPondSizes(&emptyPond), [])
+
+        var pond1 = [[0]]
+        XCTAssertEqual(getPondSizes(&pond1), [1])
+
+        var pond2 = [[1]]
+        XCTAssertEqual(getPondSizes(&pond2), [])
+    }
+
+    /**
+     16.21: Sum Swap
+
+     Given two arrays of integers, find a pair of values (one value from each array) that you can swap to give the two arrays the same sum.
+    */
+    func test_16_21_SumSwap() {
+        XCTAssertNil(sumSwap([], []))
+        XCTAssertNil(sumSwap([4, 2], [3, 2]))
+
+        let res = sumSwap([4, 1, 2, 1, 1, 2], [3, 6, 3, 3])!
+        XCTAssert(res == (1, 3) || res == (4, 6))
+
+        let res2 = sumSwap([3, 6, 3, 3], [4, 1, 2, 1, 1, 2])!
+        XCTAssert(res2 == (3, 1) || res2 == (6, 4))
+    }
+
 }

@@ -48,13 +48,13 @@ $ swift test --filter 2.1
   - 16.2.WordFrequencies
   - 16.3.CountZeroFactorial
   - 16.4.FindMinDiff
-  - 16.15.MasterMind
-  - 16.19.PondSize
   - 16.8.EnglishInt
   - 16.11.DivingBoard
-  - 16.17.ContiguousSequence
-  - 16.21.SumSwap
   - 16.13.XMLEncoding
+  - 16.15.MasterMind
+  - 16.17.ContiguousSequence
+  - 16.19.PondSize
+  - 16.21.SumSwap
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid
