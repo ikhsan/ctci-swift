@@ -75,7 +75,7 @@ class ModerateTests: XCTestCase {
      16.11: Diving Board
 
      You are building a diving board by placing a bunch of planks of weed end-to-end. There are two types of planks, one of length `shorter` and one of length `longer`. You must use exactly K planks of wood. Write a method to generate all possible lengths for the diving board.
-    */    
+    */
     func test_16_11_DivingBoard() {
         XCTAssertEqual(allLengthsForBoard(length1: 3, length2: 5, k: 1), [3, 5])
         XCTAssertEqual(allLengthsForBoard(length1: 3, length2: 5, k: 3), [9, 11, 13, 15])
@@ -85,7 +85,7 @@ class ModerateTests: XCTestCase {
      16.12: XML Encoding
 
      Since XML is very verbose, you are given a way of encoding it where each tag gets mapped to a pre-defined integer value. The language/grammar is as follows:
-     
+
      Element    --> Tag Attributes END Children END
      Attribute  --> Tag Value
      END        --> 0
@@ -114,7 +114,7 @@ class ModerateTests: XCTestCase {
      16.15: Master Mind
 
      The Game of Master Mind is played as follows:
-     
+
      The computer has four slots, and each slot will contain a ball that is red (R), yellow (Y), green (G) or blue (B). For example, the computer might have RGGB (Slot #1 is red, Slots #2 and #3 are green, Slot #4 is blue).
 
      When you guess the correct color for the correct slot, you get a "hit". If you guess a color taht exists but is in the wrong slot, you get a "pseudo-hit". Note that a slot that is a hit can never count as a pseudo-hit.
@@ -183,4 +183,38 @@ class ModerateTests: XCTestCase {
         XCTAssert(res2 == (3, 1) || res2 == (6, 4))
     }
 
+    /**
+     16.22: Langton's Ant:
+
+     An ant is sitting on an infinite grid of white and black squares. Initially, the grid is all white and the ant faces right. At each step, it does the following:
+
+     1) At a white square, flip the color of the square, turn 90 degrees right (clockwise), and move forward one unit.
+
+     2) At a black square, flip the color of the square, turn 90 degrees left (counter-clockwise), and move forward one unit.
+
+     Write a program to simulate the first K moves that the ant makes and print the final board as a grid. Note that you are not provided with thte data structure to represent the grid. This is something you must design yourself. The only input to your method is K. You should print the final grid and return nothing. The method signature might be something like printAnt(moves: Int) -> String.
+    */
+    func test_16_22_LangtonsAnt() {
+        XCTAssertEqual(printAnt(moves: 1), """
+            1
+            0
+            """
+        )
+
+        XCTAssertEqual(printAnt(moves: 6), """
+            010
+            100
+            110
+            """
+        )
+
+        XCTAssertEqual(printAnt(moves: 48), """
+            001100
+            010010
+            100001
+            100001
+            011110
+            """
+        )
+    }
 }

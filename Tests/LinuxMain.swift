@@ -50,7 +50,8 @@ extension ModerateTests {
     ("test_16_15_MasterMind", test_16_15_MasterMind),
     ("test_16_17_ContiguousSequence", test_16_17_ContiguousSequence),
     ("test_16_19_PondSize", test_16_19_PondSize),
-    ("test_16_21_SumSwap", test_16_21_SumSwap)
+    ("test_16_21_SumSwap", test_16_21_SumSwap),
+    ("test_16_22_LangtonsAnt", test_16_22_LangtonsAnt)
   ]
 }
 extension RecursionAndDynamicProgrammingTests {

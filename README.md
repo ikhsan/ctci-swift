@@ -57,6 +57,7 @@ $ swift test --filter 2.1
   - 16.17.ContiguousSequence
   - 16.19.PondSize
   - 16.21.SumSwap
+  - 16.22.LangtonsAnt
 - RecursionAndDynamicProgramming
   - 8.1.TripleSteps
   - 8.2.RobotInAGrid
