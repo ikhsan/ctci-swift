@@ -36,6 +36,8 @@ $ swift test --filter 2.1
 - BitManipulation
   - 5.1.Insertion
   - 5.6.Conversion
+- HardQuestions
+  - 17.7.BabyNames
 - LinkedLists
   - 2.1.RemoveDups
   - 2.2.ReturnKthToLast

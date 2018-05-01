@@ -25,6 +25,10 @@ let package = Package(
         .target(name: "RecursionAndDynamicProgrammingQuestions"),
         .target(name: "SortingAndSearchingQuestions"),
         .target(name: "ModerateQuestions"),
+        .target(
+            name: "HardQuestions",
+            dependencies: [ "DataStructure" ]
+        ),
 
         .testTarget(
             name: "CrackingTests",
@@ -37,6 +41,7 @@ let package = Package(
                 "RecursionAndDynamicProgrammingQuestions",
                 "SortingAndSearchingQuestions",
                 "ModerateQuestions",
+                "HardQuestions",
             ]
         )
     ]

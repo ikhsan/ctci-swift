@@ -23,6 +23,11 @@ extension BitManipulationTests {
     ("test_5_6_Conversion", test_5_6_Conversion)
   ]
 }
+extension HardQuestions {
+  static var allTests: [(String, (HardQuestions) -> () throws -> Void)] = [
+    ("test_17_7_BabyNames", test_17_7_BabyNames)
+  ]
+}
 extension LinkedListsTests {
   static var allTests: [(String, (LinkedListsTests) -> () throws -> Void)] = [
     ("test_2_1_RemoveDups", test_2_1_RemoveDups),
@@ -85,6 +90,7 @@ extension TreesAndGraphsTests {
 XCTMain([
   testCase(ArrayAndStringTests.allTests),
   testCase(BitManipulationTests.allTests),
+  testCase(HardQuestions.allTests),
   testCase(LinkedListsTests.allTests),
   testCase(ModerateTests.allTests),
   testCase(RecursionAndDynamicProgrammingTests.allTests),
