@@ -16,4 +16,17 @@ class HardQuestions: XCTestCase {
         XCTAssertEqual(result["John"], 27)
         XCTAssertEqual(result["Chris"], 36)
     }
+
+    /**
+     17.21: Volume of Histogram
+
+     Imagine a histogram (bar graph). Design an algorithm to compute the volume of water it could hold if someone poured water acress the top. You can assume that each histogram bar has width 1.
+    */
+
+    func test_17_21_VolumeOfHistogram() {
+        XCTAssertEqual(calculateVolume(histogram: [2, 0, 2]), 2)
+        XCTAssertEqual(calculateVolume(histogram: [3, 0, 0, 2, 0, 4]), 10)
+        XCTAssertEqual(calculateVolume(histogram: [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]), 6)
+        XCTAssertEqual(calculateVolume(histogram: [0, 0, 4, 0, 0, 6, 0, 0, 3, 0, 5, 0, 1, 0, 0, 0]), 26)
+    }
 }

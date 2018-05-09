@@ -25,7 +25,8 @@ extension BitManipulationTests {
 }
 extension HardQuestions {
   static var allTests: [(String, (HardQuestions) -> () throws -> Void)] = [
-    ("test_17_7_BabyNames", test_17_7_BabyNames)
+    ("test_17_7_BabyNames", test_17_7_BabyNames),
+    ("test_17_21_VolumeOfHistogram", test_17_21_VolumeOfHistogram)
   ]
 }
 extension LinkedListsTests {

@@ -38,6 +38,7 @@ $ swift test --filter 2.1
   - 5.6.Conversion
 - HardQuestions
   - 17.7.BabyNames
+  - 17.21.VolumeOfHistogram
 - LinkedLists
   - 2.1.RemoveDups
   - 2.2.ReturnKthToLast
